@@ -96,32 +96,41 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-	  uint8_t pole [32] = {1,0,1,0,1,0,0,1,1,1,0,1,1,1,0,1,1,1,0,0,1,0,1,0,1,0,0,0,0,0,0,0};
-	  for (uint8_t i = 0; i < 32; i++)
+	  /*uint8_t pole [32] = {1,0,1,0,1,0,0,1,1,1,0,1,1,1,0,1,1,1,0,0,1,0,1,0,1,0,0,0,0,0,0,0};
+  	  for (uint8_t i = 0; i < 32; i++)
 	  {
 		  if (pole[i] == 1){
-
 			  LL_GPIO_SetOutputPin(LD2_GPIO_Port, LD2_Pin);
-
 		  } else {
 			  LL_GPIO_ResetOutputPin(LD2_GPIO_Port, LD2_Pin);
+		  }
+		  LL_mDelay(200);
+	  }
+
+	   */
+
+	  uint32_t pole = 0b10101001110111011100101010000000;
+	  for (int8_t i = 31; i >= 0; i--){
+		  if (((pole >> i) & 1) == 1){
+			  LL_GPIO_SetOutputPin(LD2_GPIO_Port, LD2_Pin);
+		  } else {
+			  LL_GPIO_ResetOutputPin(LD2_GPIO_Port, LD2_Pin);
+		  }
+		  LL_mDelay(200);
 
 	  }
-			  LL_mDelay(200);
-	  }
-}
-
-    /* USER CODE END WHILE */
-
-    /* USER CODE BEGIN 3 */
   }
-  /* USER CODE END 3 */
+  /* USER CODE END WHILE */
+
+  /* USER CODE BEGIN 3 */
+}
+/* USER CODE END 3 */
 
 
 /**
-  * @brief System Clock Configuration
-  * @retval None
-  */
+ * @brief System Clock Configuration
+ * @retval None
+ */
 void SystemClock_Config(void)
 {
   LL_FLASH_SetLatency(LL_FLASH_LATENCY_1);
