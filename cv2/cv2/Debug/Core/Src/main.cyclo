@@ -30,4 +30,4 @@
 ../Core/Src/main.c:215:13:MX_GPIO_Init	1
 ../Core/Src/main.c:294:6:blikac	2
 ../Core/Src/main.c:304:6:tlacitko	8
-../Core/Src/main.c:343:6:Error_Handler	1
+../Core/Src/main.c:344:6:Error_Handler	1

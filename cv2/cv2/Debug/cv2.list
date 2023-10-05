@@ -1049,137 +1049,137 @@ __STATIC_INLINE void LL_GPIO_TogglePin(GPIO_TypeDef *GPIOx, uint32_t PinMask)
 
 08000656 <main>:
 /**
-  * @brief  The application entry point.
-  * @retval int
-  */
+ * @brief  The application entry point.
+ * @retval int
+ */
 int main(void)
 {
  8000656:	b580      	push	{r7, lr}
  8000658:	af00      	add	r7, sp, #0
-  /* USER CODE END 1 */
+	/* USER CODE END 1 */
 
-  /* MCU Configuration--------------------------------------------------------*/
+	/* MCU Configuration--------------------------------------------------------*/
 
-  /* Reset of all peripherals, Initializes the Flash interface and the Systick. */
-  LL_APB1_GRP2_EnableClock(LL_APB1_GRP2_PERIPH_SYSCFG);
+	/* Reset of all peripherals, Initializes the Flash interface and the Systick. */
+	LL_APB1_GRP2_EnableClock(LL_APB1_GRP2_PERIPH_SYSCFG);
  800065a:	2001      	movs	r0, #1
  800065c:	f7ff fed0 	bl	8000400 <LL_APB1_GRP2_EnableClock>
-  LL_APB1_GRP1_EnableClock(LL_APB1_GRP1_PERIPH_PWR);
+	LL_APB1_GRP1_EnableClock(LL_APB1_GRP1_PERIPH_PWR);
  8000660:	2380      	movs	r3, #128	; 0x80
  8000662:	055b      	lsls	r3, r3, #21
  8000664:	0018      	movs	r0, r3
  8000666:	f7ff feb5 	bl	80003d4 <LL_APB1_GRP1_EnableClock>
-  /* USER CODE BEGIN Init */
+	/* USER CODE BEGIN Init */
 
-  /* USER CODE END Init */
+	/* USER CODE END Init */
 
-  /* Configure the system clock */
-  SystemClock_Config();
+	/* Configure the system clock */
+	SystemClock_Config();
  800066a:	f000 f80b 	bl	8000684 <SystemClock_Config>
-  /* USER CODE BEGIN SysInit */
+	/* USER CODE BEGIN SysInit */
 
-  /* USER CODE END SysInit */
+	/* USER CODE END SysInit */
 
-  /* Initialize all configured peripherals */
-  MX_GPIO_Init();
+	/* Initialize all configured peripherals */
+	MX_GPIO_Init();
  800066e:	f000 f8c7 	bl	8000800 <MX_GPIO_Init>
-  MX_USART2_UART_Init();
+	MX_USART2_UART_Init();
  8000672:	f000 f847 	bl	8000704 <MX_USART2_UART_Init>
-  /* USER CODE BEGIN 2 */
-  LL_SYSTICK_EnableIT();
+	/* USER CODE BEGIN 2 */
+	LL_SYSTICK_EnableIT();
  8000676:	f7ff ff1f 	bl	80004b8 <LL_SYSTICK_EnableIT>
-  /* Infinite loop */
-  /* USER CODE BEGIN WHILE */
-  while (1)
-  {
+	/* Infinite loop */
+	/* USER CODE BEGIN WHILE */
+	while (1)
+	{
 
-	  blikac();
+		blikac();
  800067a:	f000 f987 	bl	800098c <blikac>
-	  tlacitko();
+		tlacitko();
  800067e:	f000 f9a1 	bl	80009c4 <tlacitko>
-  {
+	{
  8000682:	e7fa      	b.n	800067a <main+0x24>
 
 08000684 <SystemClock_Config>:
 /**
-  * @brief System Clock Configuration
-  * @retval None
-  */
+ * @brief System Clock Configuration
+ * @retval None
+ */
 void SystemClock_Config(void)
 {
  8000684:	b580      	push	{r7, lr}
  8000686:	af00      	add	r7, sp, #0
-  LL_FLASH_SetLatency(LL_FLASH_LATENCY_1);
+	LL_FLASH_SetLatency(LL_FLASH_LATENCY_1);
  8000688:	2001      	movs	r0, #1
  800068a:	f7ff fef5 	bl	8000478 <LL_FLASH_SetLatency>
-  while(LL_FLASH_GetLatency() != LL_FLASH_LATENCY_1)
+	while(LL_FLASH_GetLatency() != LL_FLASH_LATENCY_1)
  800068e:	46c0      	nop			; (mov r8, r8)
  8000690:	f7ff ff06 	bl	80004a0 <LL_FLASH_GetLatency>
  8000694:	0003      	movs	r3, r0
  8000696:	2b01      	cmp	r3, #1
  8000698:	d1fa      	bne.n	8000690 <SystemClock_Config+0xc>
-  {
-  }
-  LL_RCC_HSI_Enable();
+	{
+	}
+	LL_RCC_HSI_Enable();
  800069a:	f7ff fdc1 	bl	8000220 <LL_RCC_HSI_Enable>
 
-   /* Wait till HSI is ready */
-  while(LL_RCC_HSI_IsReady() != 1)
+	/* Wait till HSI is ready */
+	while(LL_RCC_HSI_IsReady() != 1)
  800069e:	46c0      	nop			; (mov r8, r8)
  80006a0:	f7ff fdcc 	bl	800023c <LL_RCC_HSI_IsReady>
  80006a4:	0003      	movs	r3, r0
  80006a6:	2b01      	cmp	r3, #1
  80006a8:	d1fa      	bne.n	80006a0 <SystemClock_Config+0x1c>
-  {
+	{
 
-  }
-  LL_RCC_HSI_SetCalibTrimming(16);
+	}
+	LL_RCC_HSI_SetCalibTrimming(16);
  80006aa:	2010      	movs	r0, #16
  80006ac:	f7ff fdd6 	bl	800025c <LL_RCC_HSI_SetCalibTrimming>
-  LL_RCC_PLL_ConfigDomain_SYS(LL_RCC_PLLSOURCE_HSI_DIV_2, LL_RCC_PLL_MUL_12);
+	LL_RCC_PLL_ConfigDomain_SYS(LL_RCC_PLLSOURCE_HSI_DIV_2, LL_RCC_PLL_MUL_12);
  80006b0:	23a0      	movs	r3, #160	; 0xa0
  80006b2:	039b      	lsls	r3, r3, #14
  80006b4:	0019      	movs	r1, r3
  80006b6:	2000      	movs	r0, #0
  80006b8:	f7ff fe50 	bl	800035c <LL_RCC_PLL_ConfigDomain_SYS>
-  LL_RCC_PLL_Enable();
+	LL_RCC_PLL_Enable();
  80006bc:	f7ff fe2c 	bl	8000318 <LL_RCC_PLL_Enable>
 
-   /* Wait till PLL is ready */
-  while(LL_RCC_PLL_IsReady() != 1)
+	/* Wait till PLL is ready */
+	while(LL_RCC_PLL_IsReady() != 1)
  80006c0:	46c0      	nop			; (mov r8, r8)
  80006c2:	f7ff fe37 	bl	8000334 <LL_RCC_PLL_IsReady>
  80006c6:	0003      	movs	r3, r0
  80006c8:	2b01      	cmp	r3, #1
  80006ca:	d1fa      	bne.n	80006c2 <SystemClock_Config+0x3e>
-  {
+	{
 
-  }
-  LL_RCC_SetAHBPrescaler(LL_RCC_SYSCLK_DIV_1);
+	}
+	LL_RCC_SetAHBPrescaler(LL_RCC_SYSCLK_DIV_1);
  80006cc:	2000      	movs	r0, #0
  80006ce:	f7ff fdf9 	bl	80002c4 <LL_RCC_SetAHBPrescaler>
-  LL_RCC_SetAPB1Prescaler(LL_RCC_APB1_DIV_1);
+	LL_RCC_SetAPB1Prescaler(LL_RCC_APB1_DIV_1);
  80006d2:	2000      	movs	r0, #0
  80006d4:	f7ff fe0a 	bl	80002ec <LL_RCC_SetAPB1Prescaler>
-  LL_RCC_SetSysClkSource(LL_RCC_SYS_CLKSOURCE_PLL);
+	LL_RCC_SetSysClkSource(LL_RCC_SYS_CLKSOURCE_PLL);
  80006d8:	2002      	movs	r0, #2
  80006da:	f7ff fdd3 	bl	8000284 <LL_RCC_SetSysClkSource>
 
-   /* Wait till System clock is ready */
-  while(LL_RCC_GetSysClkSource() != LL_RCC_SYS_CLKSOURCE_STATUS_PLL)
+	/* Wait till System clock is ready */
+	while(LL_RCC_GetSysClkSource() != LL_RCC_SYS_CLKSOURCE_STATUS_PLL)
  80006de:	46c0      	nop			; (mov r8, r8)
  80006e0:	f7ff fde4 	bl	80002ac <LL_RCC_GetSysClkSource>
  80006e4:	0003      	movs	r3, r0
  80006e6:	2b08      	cmp	r3, #8
  80006e8:	d1fa      	bne.n	80006e0 <SystemClock_Config+0x5c>
-  {
+	{
 
-  }
-  LL_Init1msTick(48000000);
+	}
+	LL_Init1msTick(48000000);
  80006ea:	4b05      	ldr	r3, [pc, #20]	; (8000700 <SystemClock_Config+0x7c>)
  80006ec:	0018      	movs	r0, r3
  80006ee:	f000 fea5 	bl	800143c <LL_Init1msTick>
-  LL_SetSystemCoreClock(48000000);
+	LL_SetSystemCoreClock(48000000);
  80006f2:	4b03      	ldr	r3, [pc, #12]	; (8000700 <SystemClock_Config+0x7c>)
  80006f4:	0018      	movs	r0, r3
  80006f6:	f000 feb1 	bl	800145c <LL_SetSystemCoreClock>
@@ -1190,21 +1190,21 @@ void SystemClock_Config(void)
  8000700:	02dc6c00 	.word	0x02dc6c00
 
 08000704 <MX_USART2_UART_Init>:
-  * @brief USART2 Initialization Function
-  * @param None
-  * @retval None
-  */
+ * @brief USART2 Initialization Function
+ * @param None
+ * @retval None
+ */
 static void MX_USART2_UART_Init(void)
 {
  8000704:	b590      	push	{r4, r7, lr}
  8000706:	b08f      	sub	sp, #60	; 0x3c
  8000708:	af00      	add	r7, sp, #0
 
-  /* USER CODE BEGIN USART2_Init 0 */
+	/* USER CODE BEGIN USART2_Init 0 */
 
-  /* USER CODE END USART2_Init 0 */
+	/* USER CODE END USART2_Init 0 */
 
-  LL_USART_InitTypeDef USART_InitStruct = {0};
+	LL_USART_InitTypeDef USART_InitStruct = {0};
  800070a:	241c      	movs	r4, #28
  800070c:	193b      	adds	r3, r7, r4
  800070e:	0018      	movs	r0, r3
@@ -1213,7 +1213,7 @@ static void MX_USART2_UART_Init(void)
  8000714:	2100      	movs	r1, #0
  8000716:	f000 feaf 	bl	8001478 <memset>
 
-  LL_GPIO_InitTypeDef GPIO_InitStruct = {0};
+	LL_GPIO_InitTypeDef GPIO_InitStruct = {0};
  800071a:	1d3b      	adds	r3, r7, #4
  800071c:	0018      	movs	r0, r3
  800071e:	2318      	movs	r3, #24
@@ -1221,47 +1221,47 @@ static void MX_USART2_UART_Init(void)
  8000722:	2100      	movs	r1, #0
  8000724:	f000 fea8 	bl	8001478 <memset>
 
-  /* Peripheral clock enable */
-  LL_APB1_GRP1_EnableClock(LL_APB1_GRP1_PERIPH_USART2);
+	/* Peripheral clock enable */
+	LL_APB1_GRP1_EnableClock(LL_APB1_GRP1_PERIPH_USART2);
  8000728:	2380      	movs	r3, #128	; 0x80
  800072a:	029b      	lsls	r3, r3, #10
  800072c:	0018      	movs	r0, r3
  800072e:	f7ff fe51 	bl	80003d4 <LL_APB1_GRP1_EnableClock>
 
-  LL_AHB1_GRP1_EnableClock(LL_AHB1_GRP1_PERIPH_GPIOA);
+	LL_AHB1_GRP1_EnableClock(LL_AHB1_GRP1_PERIPH_GPIOA);
  8000732:	2380      	movs	r3, #128	; 0x80
  8000734:	029b      	lsls	r3, r3, #10
  8000736:	0018      	movs	r0, r3
  8000738:	f7ff fe36 	bl	80003a8 <LL_AHB1_GRP1_EnableClock>
-  /**USART2 GPIO Configuration
+	/**USART2 GPIO Configuration
   PA2   ------> USART2_TX
   PA3   ------> USART2_RX
-  */
-  GPIO_InitStruct.Pin = USART_TX_Pin;
+	 */
+	GPIO_InitStruct.Pin = USART_TX_Pin;
  800073c:	1d3b      	adds	r3, r7, #4
  800073e:	2204      	movs	r2, #4
  8000740:	601a      	str	r2, [r3, #0]
-  GPIO_InitStruct.Mode = LL_GPIO_MODE_ALTERNATE;
+	GPIO_InitStruct.Mode = LL_GPIO_MODE_ALTERNATE;
  8000742:	1d3b      	adds	r3, r7, #4
  8000744:	2202      	movs	r2, #2
  8000746:	605a      	str	r2, [r3, #4]
-  GPIO_InitStruct.Speed = LL_GPIO_SPEED_FREQ_LOW;
+	GPIO_InitStruct.Speed = LL_GPIO_SPEED_FREQ_LOW;
  8000748:	1d3b      	adds	r3, r7, #4
  800074a:	2200      	movs	r2, #0
  800074c:	609a      	str	r2, [r3, #8]
-  GPIO_InitStruct.OutputType = LL_GPIO_OUTPUT_PUSHPULL;
+	GPIO_InitStruct.OutputType = LL_GPIO_OUTPUT_PUSHPULL;
  800074e:	1d3b      	adds	r3, r7, #4
  8000750:	2200      	movs	r2, #0
  8000752:	60da      	str	r2, [r3, #12]
-  GPIO_InitStruct.Pull = LL_GPIO_PULL_NO;
+	GPIO_InitStruct.Pull = LL_GPIO_PULL_NO;
  8000754:	1d3b      	adds	r3, r7, #4
  8000756:	2200      	movs	r2, #0
  8000758:	611a      	str	r2, [r3, #16]
-  GPIO_InitStruct.Alternate = LL_GPIO_AF_1;
+	GPIO_InitStruct.Alternate = LL_GPIO_AF_1;
  800075a:	1d3b      	adds	r3, r7, #4
  800075c:	2201      	movs	r2, #1
  800075e:	615a      	str	r2, [r3, #20]
-  LL_GPIO_Init(USART_TX_GPIO_Port, &GPIO_InitStruct);
+	LL_GPIO_Init(USART_TX_GPIO_Port, &GPIO_InitStruct);
  8000760:	1d3a      	adds	r2, r7, #4
  8000762:	2390      	movs	r3, #144	; 0x90
  8000764:	05db      	lsls	r3, r3, #23
@@ -1269,31 +1269,31 @@ static void MX_USART2_UART_Init(void)
  8000768:	0018      	movs	r0, r3
  800076a:	f000 fbaf 	bl	8000ecc <LL_GPIO_Init>
 
-  GPIO_InitStruct.Pin = USART_RX_Pin;
+	GPIO_InitStruct.Pin = USART_RX_Pin;
  800076e:	1d3b      	adds	r3, r7, #4
  8000770:	2208      	movs	r2, #8
  8000772:	601a      	str	r2, [r3, #0]
-  GPIO_InitStruct.Mode = LL_GPIO_MODE_ALTERNATE;
+	GPIO_InitStruct.Mode = LL_GPIO_MODE_ALTERNATE;
  8000774:	1d3b      	adds	r3, r7, #4
  8000776:	2202      	movs	r2, #2
  8000778:	605a      	str	r2, [r3, #4]
-  GPIO_InitStruct.Speed = LL_GPIO_SPEED_FREQ_LOW;
+	GPIO_InitStruct.Speed = LL_GPIO_SPEED_FREQ_LOW;
  800077a:	1d3b      	adds	r3, r7, #4
  800077c:	2200      	movs	r2, #0
  800077e:	609a      	str	r2, [r3, #8]
-  GPIO_InitStruct.OutputType = LL_GPIO_OUTPUT_PUSHPULL;
+	GPIO_InitStruct.OutputType = LL_GPIO_OUTPUT_PUSHPULL;
  8000780:	1d3b      	adds	r3, r7, #4
  8000782:	2200      	movs	r2, #0
  8000784:	60da      	str	r2, [r3, #12]
-  GPIO_InitStruct.Pull = LL_GPIO_PULL_NO;
+	GPIO_InitStruct.Pull = LL_GPIO_PULL_NO;
  8000786:	1d3b      	adds	r3, r7, #4
  8000788:	2200      	movs	r2, #0
  800078a:	611a      	str	r2, [r3, #16]
-  GPIO_InitStruct.Alternate = LL_GPIO_AF_1;
+	GPIO_InitStruct.Alternate = LL_GPIO_AF_1;
  800078c:	1d3b      	adds	r3, r7, #4
  800078e:	2201      	movs	r2, #1
  8000790:	615a      	str	r2, [r3, #20]
-  LL_GPIO_Init(USART_RX_GPIO_Port, &GPIO_InitStruct);
+	LL_GPIO_Init(USART_RX_GPIO_Port, &GPIO_InitStruct);
  8000792:	1d3a      	adds	r2, r7, #4
  8000794:	2390      	movs	r3, #144	; 0x90
  8000796:	05db      	lsls	r3, r3, #23
@@ -1301,60 +1301,60 @@ static void MX_USART2_UART_Init(void)
  800079a:	0018      	movs	r0, r3
  800079c:	f000 fb96 	bl	8000ecc <LL_GPIO_Init>
 
-  /* USER CODE BEGIN USART2_Init 1 */
+	/* USER CODE BEGIN USART2_Init 1 */
 
-  /* USER CODE END USART2_Init 1 */
-  USART_InitStruct.BaudRate = 38400;
+	/* USER CODE END USART2_Init 1 */
+	USART_InitStruct.BaudRate = 38400;
  80007a0:	193b      	adds	r3, r7, r4
  80007a2:	2296      	movs	r2, #150	; 0x96
  80007a4:	0212      	lsls	r2, r2, #8
  80007a6:	601a      	str	r2, [r3, #0]
-  USART_InitStruct.DataWidth = LL_USART_DATAWIDTH_8B;
+	USART_InitStruct.DataWidth = LL_USART_DATAWIDTH_8B;
  80007a8:	0021      	movs	r1, r4
  80007aa:	187b      	adds	r3, r7, r1
  80007ac:	2200      	movs	r2, #0
  80007ae:	605a      	str	r2, [r3, #4]
-  USART_InitStruct.StopBits = LL_USART_STOPBITS_1;
+	USART_InitStruct.StopBits = LL_USART_STOPBITS_1;
  80007b0:	187b      	adds	r3, r7, r1
  80007b2:	2200      	movs	r2, #0
  80007b4:	609a      	str	r2, [r3, #8]
-  USART_InitStruct.Parity = LL_USART_PARITY_NONE;
+	USART_InitStruct.Parity = LL_USART_PARITY_NONE;
  80007b6:	187b      	adds	r3, r7, r1
  80007b8:	2200      	movs	r2, #0
  80007ba:	60da      	str	r2, [r3, #12]
-  USART_InitStruct.TransferDirection = LL_USART_DIRECTION_TX_RX;
+	USART_InitStruct.TransferDirection = LL_USART_DIRECTION_TX_RX;
  80007bc:	187b      	adds	r3, r7, r1
  80007be:	220c      	movs	r2, #12
  80007c0:	611a      	str	r2, [r3, #16]
-  USART_InitStruct.HardwareFlowControl = LL_USART_HWCONTROL_NONE;
+	USART_InitStruct.HardwareFlowControl = LL_USART_HWCONTROL_NONE;
  80007c2:	187b      	adds	r3, r7, r1
  80007c4:	2200      	movs	r2, #0
  80007c6:	615a      	str	r2, [r3, #20]
-  USART_InitStruct.OverSampling = LL_USART_OVERSAMPLING_16;
+	USART_InitStruct.OverSampling = LL_USART_OVERSAMPLING_16;
  80007c8:	187b      	adds	r3, r7, r1
  80007ca:	2200      	movs	r2, #0
  80007cc:	619a      	str	r2, [r3, #24]
-  LL_USART_Init(USART2, &USART_InitStruct);
+	LL_USART_Init(USART2, &USART_InitStruct);
  80007ce:	187b      	adds	r3, r7, r1
  80007d0:	4a0a      	ldr	r2, [pc, #40]	; (80007fc <MX_USART2_UART_Init+0xf8>)
  80007d2:	0019      	movs	r1, r3
  80007d4:	0010      	movs	r0, r2
  80007d6:	f000 fdaf 	bl	8001338 <LL_USART_Init>
-  LL_USART_DisableIT_CTS(USART2);
+	LL_USART_DisableIT_CTS(USART2);
  80007da:	4b08      	ldr	r3, [pc, #32]	; (80007fc <MX_USART2_UART_Init+0xf8>)
  80007dc:	0018      	movs	r0, r3
  80007de:	f7ff fe9f 	bl	8000520 <LL_USART_DisableIT_CTS>
-  LL_USART_ConfigAsyncMode(USART2);
+	LL_USART_ConfigAsyncMode(USART2);
  80007e2:	4b06      	ldr	r3, [pc, #24]	; (80007fc <MX_USART2_UART_Init+0xf8>)
  80007e4:	0018      	movs	r0, r3
  80007e6:	f7ff fe83 	bl	80004f0 <LL_USART_ConfigAsyncMode>
-  LL_USART_Enable(USART2);
+	LL_USART_Enable(USART2);
  80007ea:	4b04      	ldr	r3, [pc, #16]	; (80007fc <MX_USART2_UART_Init+0xf8>)
  80007ec:	0018      	movs	r0, r3
  80007ee:	f7ff fe71 	bl	80004d4 <LL_USART_Enable>
-  /* USER CODE BEGIN USART2_Init 2 */
+	/* USER CODE BEGIN USART2_Init 2 */
 
-  /* USER CODE END USART2_Init 2 */
+	/* USER CODE END USART2_Init 2 */
 
 }
  80007f2:	46c0      	nop			; (mov r8, r8)
@@ -1365,16 +1365,16 @@ static void MX_USART2_UART_Init(void)
  80007fc:	40004400 	.word	0x40004400
 
 08000800 <MX_GPIO_Init>:
-  * @brief GPIO Initialization Function
-  * @param None
-  * @retval None
-  */
+ * @brief GPIO Initialization Function
+ * @param None
+ * @retval None
+ */
 static void MX_GPIO_Init(void)
 {
  8000800:	b590      	push	{r4, r7, lr}
  8000802:	b089      	sub	sp, #36	; 0x24
  8000804:	af00      	add	r7, sp, #0
-  LL_EXTI_InitTypeDef EXTI_InitStruct = {0};
+	LL_EXTI_InitTypeDef EXTI_InitStruct = {0};
  8000806:	2418      	movs	r4, #24
  8000808:	193b      	adds	r3, r7, r4
  800080a:	0018      	movs	r0, r3
@@ -1382,70 +1382,70 @@ static void MX_GPIO_Init(void)
  800080e:	001a      	movs	r2, r3
  8000810:	2100      	movs	r1, #0
  8000812:	f000 fe31 	bl	8001478 <memset>
-  LL_GPIO_InitTypeDef GPIO_InitStruct = {0};
+	LL_GPIO_InitTypeDef GPIO_InitStruct = {0};
  8000816:	003b      	movs	r3, r7
  8000818:	0018      	movs	r0, r3
  800081a:	2318      	movs	r3, #24
  800081c:	001a      	movs	r2, r3
  800081e:	2100      	movs	r1, #0
  8000820:	f000 fe2a 	bl	8001478 <memset>
-/* USER CODE BEGIN MX_GPIO_Init_1 */
-/* USER CODE END MX_GPIO_Init_1 */
+	/* USER CODE BEGIN MX_GPIO_Init_1 */
+	/* USER CODE END MX_GPIO_Init_1 */
 
-  /* GPIO Ports Clock Enable */
-  LL_AHB1_GRP1_EnableClock(LL_AHB1_GRP1_PERIPH_GPIOC);
+	/* GPIO Ports Clock Enable */
+	LL_AHB1_GRP1_EnableClock(LL_AHB1_GRP1_PERIPH_GPIOC);
  8000824:	2380      	movs	r3, #128	; 0x80
  8000826:	031b      	lsls	r3, r3, #12
  8000828:	0018      	movs	r0, r3
  800082a:	f7ff fdbd 	bl	80003a8 <LL_AHB1_GRP1_EnableClock>
-  LL_AHB1_GRP1_EnableClock(LL_AHB1_GRP1_PERIPH_GPIOF);
+	LL_AHB1_GRP1_EnableClock(LL_AHB1_GRP1_PERIPH_GPIOF);
  800082e:	2380      	movs	r3, #128	; 0x80
  8000830:	03db      	lsls	r3, r3, #15
  8000832:	0018      	movs	r0, r3
  8000834:	f7ff fdb8 	bl	80003a8 <LL_AHB1_GRP1_EnableClock>
-  LL_AHB1_GRP1_EnableClock(LL_AHB1_GRP1_PERIPH_GPIOA);
+	LL_AHB1_GRP1_EnableClock(LL_AHB1_GRP1_PERIPH_GPIOA);
  8000838:	2380      	movs	r3, #128	; 0x80
  800083a:	029b      	lsls	r3, r3, #10
  800083c:	0018      	movs	r0, r3
  800083e:	f7ff fdb3 	bl	80003a8 <LL_AHB1_GRP1_EnableClock>
-  LL_AHB1_GRP1_EnableClock(LL_AHB1_GRP1_PERIPH_GPIOB);
+	LL_AHB1_GRP1_EnableClock(LL_AHB1_GRP1_PERIPH_GPIOB);
  8000842:	2380      	movs	r3, #128	; 0x80
  8000844:	02db      	lsls	r3, r3, #11
  8000846:	0018      	movs	r0, r3
  8000848:	f7ff fdae 	bl	80003a8 <LL_AHB1_GRP1_EnableClock>
 
-  /**/
-  LL_GPIO_ResetOutputPin(LED1_GPIO_Port, LED1_Pin);
+	/**/
+	LL_GPIO_ResetOutputPin(LED1_GPIO_Port, LED1_Pin);
  800084c:	2390      	movs	r3, #144	; 0x90
  800084e:	05db      	lsls	r3, r3, #23
  8000850:	2110      	movs	r1, #16
  8000852:	0018      	movs	r0, r3
  8000854:	f7ff fedc 	bl	8000610 <LL_GPIO_ResetOutputPin>
 
-  /**/
-  LL_GPIO_ResetOutputPin(LD2_GPIO_Port, LD2_Pin);
+	/**/
+	LL_GPIO_ResetOutputPin(LD2_GPIO_Port, LD2_Pin);
  8000858:	2390      	movs	r3, #144	; 0x90
  800085a:	05db      	lsls	r3, r3, #23
  800085c:	2120      	movs	r1, #32
  800085e:	0018      	movs	r0, r3
  8000860:	f7ff fed6 	bl	8000610 <LL_GPIO_ResetOutputPin>
 
-  /**/
-  LL_GPIO_ResetOutputPin(LED2_GPIO_Port, LED2_Pin);
+	/**/
+	LL_GPIO_ResetOutputPin(LED2_GPIO_Port, LED2_Pin);
  8000864:	4b46      	ldr	r3, [pc, #280]	; (8000980 <MX_GPIO_Init+0x180>)
  8000866:	2101      	movs	r1, #1
  8000868:	0018      	movs	r0, r3
  800086a:	f7ff fed1 	bl	8000610 <LL_GPIO_ResetOutputPin>
 
-  /**/
-  LL_SYSCFG_SetEXTISource(LL_SYSCFG_EXTI_PORTC, LL_SYSCFG_EXTI_LINE13);
+	/**/
+	LL_SYSCFG_SetEXTISource(LL_SYSCFG_EXTI_PORTC, LL_SYSCFG_EXTI_LINE13);
  800086e:	4b45      	ldr	r3, [pc, #276]	; (8000984 <MX_GPIO_Init+0x184>)
  8000870:	0019      	movs	r1, r3
  8000872:	2002      	movs	r0, #2
  8000874:	f7ff fdda 	bl	800042c <LL_SYSCFG_SetEXTISource>
 
-  /**/
-  LL_GPIO_SetPinPull(B1_GPIO_Port, B1_Pin, LL_GPIO_PULL_UP);
+	/**/
+	LL_GPIO_SetPinPull(B1_GPIO_Port, B1_Pin, LL_GPIO_PULL_UP);
  8000878:	2380      	movs	r3, #128	; 0x80
  800087a:	019b      	lsls	r3, r3, #6
  800087c:	4842      	ldr	r0, [pc, #264]	; (8000988 <MX_GPIO_Init+0x188>)
@@ -1453,8 +1453,8 @@ static void MX_GPIO_Init(void)
  8000880:	0019      	movs	r1, r3
  8000882:	f7ff fe8b 	bl	800059c <LL_GPIO_SetPinPull>
 
-  /**/
-  LL_GPIO_SetPinMode(B1_GPIO_Port, B1_Pin, LL_GPIO_MODE_INPUT);
+	/**/
+	LL_GPIO_SetPinMode(B1_GPIO_Port, B1_Pin, LL_GPIO_MODE_INPUT);
  8000886:	2380      	movs	r3, #128	; 0x80
  8000888:	019b      	lsls	r3, r3, #6
  800088a:	483f      	ldr	r0, [pc, #252]	; (8000988 <MX_GPIO_Init+0x188>)
@@ -1462,92 +1462,92 @@ static void MX_GPIO_Init(void)
  800088e:	0019      	movs	r1, r3
  8000890:	f7ff fe68 	bl	8000564 <LL_GPIO_SetPinMode>
 
-  /**/
-  EXTI_InitStruct.Line_0_31 = LL_EXTI_LINE_13;
+	/**/
+	EXTI_InitStruct.Line_0_31 = LL_EXTI_LINE_13;
  8000894:	0021      	movs	r1, r4
  8000896:	187b      	adds	r3, r7, r1
  8000898:	2280      	movs	r2, #128	; 0x80
  800089a:	0192      	lsls	r2, r2, #6
  800089c:	601a      	str	r2, [r3, #0]
-  EXTI_InitStruct.LineCommand = ENABLE;
+	EXTI_InitStruct.LineCommand = ENABLE;
  800089e:	187b      	adds	r3, r7, r1
  80008a0:	2201      	movs	r2, #1
  80008a2:	711a      	strb	r2, [r3, #4]
-  EXTI_InitStruct.Mode = LL_EXTI_MODE_IT;
+	EXTI_InitStruct.Mode = LL_EXTI_MODE_IT;
  80008a4:	187b      	adds	r3, r7, r1
  80008a6:	2200      	movs	r2, #0
  80008a8:	715a      	strb	r2, [r3, #5]
-  EXTI_InitStruct.Trigger = LL_EXTI_TRIGGER_FALLING;
+	EXTI_InitStruct.Trigger = LL_EXTI_TRIGGER_FALLING;
  80008aa:	187b      	adds	r3, r7, r1
  80008ac:	2202      	movs	r2, #2
  80008ae:	719a      	strb	r2, [r3, #6]
-  LL_EXTI_Init(&EXTI_InitStruct);
+	LL_EXTI_Init(&EXTI_InitStruct);
  80008b0:	187b      	adds	r3, r7, r1
  80008b2:	0018      	movs	r0, r3
  80008b4:	f000 f9ca 	bl	8000c4c <LL_EXTI_Init>
 
-  /**/
-  GPIO_InitStruct.Pin = S2_Pin;
+	/**/
+	GPIO_InitStruct.Pin = S2_Pin;
  80008b8:	003b      	movs	r3, r7
  80008ba:	2201      	movs	r2, #1
  80008bc:	601a      	str	r2, [r3, #0]
-  GPIO_InitStruct.Mode = LL_GPIO_MODE_INPUT;
+	GPIO_InitStruct.Mode = LL_GPIO_MODE_INPUT;
  80008be:	003b      	movs	r3, r7
  80008c0:	2200      	movs	r2, #0
  80008c2:	605a      	str	r2, [r3, #4]
-  GPIO_InitStruct.Pull = LL_GPIO_PULL_UP;
+	GPIO_InitStruct.Pull = LL_GPIO_PULL_UP;
  80008c4:	003b      	movs	r3, r7
  80008c6:	2201      	movs	r2, #1
  80008c8:	611a      	str	r2, [r3, #16]
-  LL_GPIO_Init(S2_GPIO_Port, &GPIO_InitStruct);
+	LL_GPIO_Init(S2_GPIO_Port, &GPIO_InitStruct);
  80008ca:	003b      	movs	r3, r7
  80008cc:	4a2e      	ldr	r2, [pc, #184]	; (8000988 <MX_GPIO_Init+0x188>)
  80008ce:	0019      	movs	r1, r3
  80008d0:	0010      	movs	r0, r2
  80008d2:	f000 fafb 	bl	8000ecc <LL_GPIO_Init>
 
-  /**/
-  GPIO_InitStruct.Pin = S1_Pin;
+	/**/
+	GPIO_InitStruct.Pin = S1_Pin;
  80008d6:	003b      	movs	r3, r7
  80008d8:	2202      	movs	r2, #2
  80008da:	601a      	str	r2, [r3, #0]
-  GPIO_InitStruct.Mode = LL_GPIO_MODE_INPUT;
+	GPIO_InitStruct.Mode = LL_GPIO_MODE_INPUT;
  80008dc:	003b      	movs	r3, r7
  80008de:	2200      	movs	r2, #0
  80008e0:	605a      	str	r2, [r3, #4]
-  GPIO_InitStruct.Pull = LL_GPIO_PULL_UP;
+	GPIO_InitStruct.Pull = LL_GPIO_PULL_UP;
  80008e2:	003b      	movs	r3, r7
  80008e4:	2201      	movs	r2, #1
  80008e6:	611a      	str	r2, [r3, #16]
-  LL_GPIO_Init(S1_GPIO_Port, &GPIO_InitStruct);
+	LL_GPIO_Init(S1_GPIO_Port, &GPIO_InitStruct);
  80008e8:	003b      	movs	r3, r7
  80008ea:	4a27      	ldr	r2, [pc, #156]	; (8000988 <MX_GPIO_Init+0x188>)
  80008ec:	0019      	movs	r1, r3
  80008ee:	0010      	movs	r0, r2
  80008f0:	f000 faec 	bl	8000ecc <LL_GPIO_Init>
 
-  /**/
-  GPIO_InitStruct.Pin = LED1_Pin;
+	/**/
+	GPIO_InitStruct.Pin = LED1_Pin;
  80008f4:	003b      	movs	r3, r7
  80008f6:	2210      	movs	r2, #16
  80008f8:	601a      	str	r2, [r3, #0]
-  GPIO_InitStruct.Mode = LL_GPIO_MODE_OUTPUT;
+	GPIO_InitStruct.Mode = LL_GPIO_MODE_OUTPUT;
  80008fa:	003b      	movs	r3, r7
  80008fc:	2201      	movs	r2, #1
  80008fe:	605a      	str	r2, [r3, #4]
-  GPIO_InitStruct.Speed = LL_GPIO_SPEED_FREQ_LOW;
+	GPIO_InitStruct.Speed = LL_GPIO_SPEED_FREQ_LOW;
  8000900:	003b      	movs	r3, r7
  8000902:	2200      	movs	r2, #0
  8000904:	609a      	str	r2, [r3, #8]
-  GPIO_InitStruct.OutputType = LL_GPIO_OUTPUT_PUSHPULL;
+	GPIO_InitStruct.OutputType = LL_GPIO_OUTPUT_PUSHPULL;
  8000906:	003b      	movs	r3, r7
  8000908:	2200      	movs	r2, #0
  800090a:	60da      	str	r2, [r3, #12]
-  GPIO_InitStruct.Pull = LL_GPIO_PULL_NO;
+	GPIO_InitStruct.Pull = LL_GPIO_PULL_NO;
  800090c:	003b      	movs	r3, r7
  800090e:	2200      	movs	r2, #0
  8000910:	611a      	str	r2, [r3, #16]
-  LL_GPIO_Init(LED1_GPIO_Port, &GPIO_InitStruct);
+	LL_GPIO_Init(LED1_GPIO_Port, &GPIO_InitStruct);
  8000912:	003a      	movs	r2, r7
  8000914:	2390      	movs	r3, #144	; 0x90
  8000916:	05db      	lsls	r3, r3, #23
@@ -1555,28 +1555,28 @@ static void MX_GPIO_Init(void)
  800091a:	0018      	movs	r0, r3
  800091c:	f000 fad6 	bl	8000ecc <LL_GPIO_Init>
 
-  /**/
-  GPIO_InitStruct.Pin = LD2_Pin;
+	/**/
+	GPIO_InitStruct.Pin = LD2_Pin;
  8000920:	003b      	movs	r3, r7
  8000922:	2220      	movs	r2, #32
  8000924:	601a      	str	r2, [r3, #0]
-  GPIO_InitStruct.Mode = LL_GPIO_MODE_OUTPUT;
+	GPIO_InitStruct.Mode = LL_GPIO_MODE_OUTPUT;
  8000926:	003b      	movs	r3, r7
  8000928:	2201      	movs	r2, #1
  800092a:	605a      	str	r2, [r3, #4]
-  GPIO_InitStruct.Speed = LL_GPIO_SPEED_FREQ_LOW;
+	GPIO_InitStruct.Speed = LL_GPIO_SPEED_FREQ_LOW;
  800092c:	003b      	movs	r3, r7
  800092e:	2200      	movs	r2, #0
  8000930:	609a      	str	r2, [r3, #8]
-  GPIO_InitStruct.OutputType = LL_GPIO_OUTPUT_PUSHPULL;
+	GPIO_InitStruct.OutputType = LL_GPIO_OUTPUT_PUSHPULL;
  8000932:	003b      	movs	r3, r7
  8000934:	2200      	movs	r2, #0
  8000936:	60da      	str	r2, [r3, #12]
-  GPIO_InitStruct.Pull = LL_GPIO_PULL_NO;
+	GPIO_InitStruct.Pull = LL_GPIO_PULL_NO;
  8000938:	003b      	movs	r3, r7
  800093a:	2200      	movs	r2, #0
  800093c:	611a      	str	r2, [r3, #16]
-  LL_GPIO_Init(LD2_GPIO_Port, &GPIO_InitStruct);
+	LL_GPIO_Init(LD2_GPIO_Port, &GPIO_InitStruct);
  800093e:	003a      	movs	r2, r7
  8000940:	2390      	movs	r3, #144	; 0x90
  8000942:	05db      	lsls	r3, r3, #23
@@ -1584,36 +1584,36 @@ static void MX_GPIO_Init(void)
  8000946:	0018      	movs	r0, r3
  8000948:	f000 fac0 	bl	8000ecc <LL_GPIO_Init>
 
-  /**/
-  GPIO_InitStruct.Pin = LED2_Pin;
+	/**/
+	GPIO_InitStruct.Pin = LED2_Pin;
  800094c:	003b      	movs	r3, r7
  800094e:	2201      	movs	r2, #1
  8000950:	601a      	str	r2, [r3, #0]
-  GPIO_InitStruct.Mode = LL_GPIO_MODE_OUTPUT;
+	GPIO_InitStruct.Mode = LL_GPIO_MODE_OUTPUT;
  8000952:	003b      	movs	r3, r7
  8000954:	2201      	movs	r2, #1
  8000956:	605a      	str	r2, [r3, #4]
-  GPIO_InitStruct.Speed = LL_GPIO_SPEED_FREQ_LOW;
+	GPIO_InitStruct.Speed = LL_GPIO_SPEED_FREQ_LOW;
  8000958:	003b      	movs	r3, r7
  800095a:	2200      	movs	r2, #0
  800095c:	609a      	str	r2, [r3, #8]
-  GPIO_InitStruct.OutputType = LL_GPIO_OUTPUT_PUSHPULL;
+	GPIO_InitStruct.OutputType = LL_GPIO_OUTPUT_PUSHPULL;
  800095e:	003b      	movs	r3, r7
  8000960:	2200      	movs	r2, #0
  8000962:	60da      	str	r2, [r3, #12]
-  GPIO_InitStruct.Pull = LL_GPIO_PULL_NO;
+	GPIO_InitStruct.Pull = LL_GPIO_PULL_NO;
  8000964:	003b      	movs	r3, r7
  8000966:	2200      	movs	r2, #0
  8000968:	611a      	str	r2, [r3, #16]
-  LL_GPIO_Init(LED2_GPIO_Port, &GPIO_InitStruct);
+	LL_GPIO_Init(LED2_GPIO_Port, &GPIO_InitStruct);
  800096a:	003b      	movs	r3, r7
  800096c:	4a04      	ldr	r2, [pc, #16]	; (8000980 <MX_GPIO_Init+0x180>)
  800096e:	0019      	movs	r1, r3
  8000970:	0010      	movs	r0, r2
  8000972:	f000 faab 	bl	8000ecc <LL_GPIO_Init>
 
-/* USER CODE BEGIN MX_GPIO_Init_2 */
-  /* USER CODE END MX_GPIO_Init_2 */
+	/* USER CODE BEGIN MX_GPIO_Init_2 */
+	/* USER CODE END MX_GPIO_Init_2 */
 }
  8000976:	46c0      	nop			; (mov r8, r8)
  8000978:	46bd      	mov	sp, r7
@@ -1759,7 +1759,8 @@ void tlacitko(void)
  8000a56:	0018      	movs	r0, r3
  8000a58:	f7ff fdce 	bl	80005f8 <LL_GPIO_SetOutputPin>
 		}
-		old_s1 = new_s1;
+		old_s1
+		= new_s1;
  8000a5c:	4b10      	ldr	r3, [pc, #64]	; (8000aa0 <tlacitko+0xdc>)
  8000a5e:	683a      	ldr	r2, [r7, #0]
  8000a60:	601a      	str	r2, [r3, #0]
