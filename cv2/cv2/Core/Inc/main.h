@@ -45,7 +45,7 @@ extern "C" {
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+extern volatile uint32_t Tick;
 /* USER CODE END Includes */
 
 /* Exported types ------------------------------------------------------------*/
@@ -73,6 +73,8 @@ void Error_Handler(void);
 /* Private defines -----------------------------------------------------------*/
 #define B1_Pin LL_GPIO_PIN_13
 #define B1_GPIO_Port GPIOC
+#define S2_Pin LL_GPIO_PIN_0
+#define S2_GPIO_Port GPIOC
 #define S1_Pin LL_GPIO_PIN_1
 #define S1_GPIO_Port GPIOC
 #define USART_TX_Pin LL_GPIO_PIN_2
