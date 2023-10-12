@@ -627,3 +627,446 @@ Finished building: default.size.stdout
  
 Finished building: cv2.list
  
+12:31:55 **** Incremental Build of configuration Debug for project cv2 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:102:17: warning: implicit declaration of function 'blikac' [-Wimplicit-function-declaration]
+  102 |                 blikac();
+      |                 ^~~~~~
+../Core/Src/main.c:103:17: warning: implicit declaration of function 'tlacitko' [-Wimplicit-function-declaration]
+  103 |                 tlacitko();
+      |                 ^~~~~~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:294:6: warning: conflicting types for 'blikac'; have 'void(void)'
+  294 | void blikac(void)
+      |      ^~~~~~
+../Core/Src/main.c:102:17: note: previous implicit declaration of 'blikac' with type 'void(void)'
+  102 |                 blikac();
+      |                 ^~~~~~
+../Core/Src/main.c: In function 'dbnc':
+../Core/Src/main.c:342:12: error: 'tick' undeclared (first use in this function); did you mean 'Tick'?
+  342 |         if(tick > delay + 5)
+      |            ^~~~
+      |            Tick
+../Core/Src/main.c:342:12: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [Core/Src/subdir.mk:31: Core/Src/main.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+12:32:07 **** Incremental Build of configuration Debug for project cv2 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:102:17: warning: implicit declaration of function 'blikac' [-Wimplicit-function-declaration]
+  102 |                 blikac();
+      |                 ^~~~~~
+../Core/Src/main.c:103:17: warning: implicit declaration of function 'tlacitko' [-Wimplicit-function-declaration]
+  103 |                 tlacitko();
+      |                 ^~~~~~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:294:6: warning: conflicting types for 'blikac'; have 'void(void)'
+  294 | void blikac(void)
+      |      ^~~~~~
+../Core/Src/main.c:102:17: note: previous implicit declaration of 'blikac' with type 'void(void)'
+  102 |                 blikac();
+      |                 ^~~~~~
+../Core/Src/main.c: In function 'dbnc':
+../Core/Src/main.c:352:28: error: 'tick' undeclared (first use in this function); did you mean 'Tick'?
+  352 |                         if(tick > off_time)
+      |                            ^~~~
+      |                            Tick
+../Core/Src/main.c:352:28: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [Core/Src/subdir.mk:31: Core/Src/main.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+12:32:19 **** Incremental Build of configuration Debug for project cv2 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:102:17: warning: implicit declaration of function 'blikac' [-Wimplicit-function-declaration]
+  102 |                 blikac();
+      |                 ^~~~~~
+../Core/Src/main.c:103:17: warning: implicit declaration of function 'tlacitko' [-Wimplicit-function-declaration]
+  103 |                 tlacitko();
+      |                 ^~~~~~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:294:6: warning: conflicting types for 'blikac'; have 'void(void)'
+  294 | void blikac(void)
+      |      ^~~~~~
+../Core/Src/main.c:102:17: note: previous implicit declaration of 'blikac' with type 'void(void)'
+  102 |                 blikac();
+      |                 ^~~~~~
+arm-none-eabi-gcc -o "cv2.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Temp\xpecon00\MPC-MKS\cv2\cv2\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cv2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+C:/appz/ST/STM32CubeIDE_1.10.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/bin/ld.exe: ./Core/Src/main.o: in function `main':
+C:/Temp/xpecon00/MPC-MKS/cv2/cv2/Debug/../Core/Src/main.c:103: undefined reference to `tlacitko'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:64: cv2.elf] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+12:32:37 **** Incremental Build of configuration Debug for project cv2 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:102:17: warning: implicit declaration of function 'blikac' [-Wimplicit-function-declaration]
+  102 |                 blikac();
+      |                 ^~~~~~
+../Core/Src/main.c:103:17: warning: implicit declaration of function 'dbnc' [-Wimplicit-function-declaration]
+  103 |                 dbnc();
+      |                 ^~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:294:6: warning: conflicting types for 'blikac'; have 'void(void)'
+  294 | void blikac(void)
+      |      ^~~~~~
+../Core/Src/main.c:102:17: note: previous implicit declaration of 'blikac' with type 'void(void)'
+  102 |                 blikac();
+      |                 ^~~~~~
+../Core/Src/main.c:336:6: warning: conflicting types for 'dbnc'; have 'void(void)'
+  336 | void dbnc(void)
+      |      ^~~~
+../Core/Src/main.c:103:17: note: previous implicit declaration of 'dbnc' with type 'void(void)'
+  103 |                 dbnc();
+      |                 ^~~~
+arm-none-eabi-gcc -o "cv2.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Temp\xpecon00\MPC-MKS\cv2\cv2\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cv2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: cv2.elf
+ 
+arm-none-eabi-size   cv2.elf 
+arm-none-eabi-objdump -h -S  cv2.elf  > "cv2.list"
+   text	   data	    bss	    dec	    hex	filename
+   5312	     16	   1584	   6912	   1b00	cv2.elf
+Finished building: default.size.stdout
+ 
+Finished building: cv2.list
+ 
+12:35:21 **** Incremental Build of configuration Debug for project cv2 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:102:17: warning: implicit declaration of function 'blikac' [-Wimplicit-function-declaration]
+  102 |                 blikac();
+      |                 ^~~~~~
+../Core/Src/main.c:103:17: warning: implicit declaration of function 'dbnc' [-Wimplicit-function-declaration]
+  103 |                 dbnc();
+      |                 ^~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:294:6: warning: conflicting types for 'blikac'; have 'void(void)'
+  294 | void blikac(void)
+      |      ^~~~~~
+../Core/Src/main.c:102:17: note: previous implicit declaration of 'blikac' with type 'void(void)'
+  102 |                 blikac();
+      |                 ^~~~~~
+../Core/Src/main.c:336:6: warning: conflicting types for 'dbnc'; have 'void(void)'
+  336 | void dbnc(void)
+      |      ^~~~
+../Core/Src/main.c:103:17: note: previous implicit declaration of 'dbnc' with type 'void(void)'
+  103 |                 dbnc();
+      |                 ^~~~
+../Core/Src/main.c: In function 'dbnc1':
+../Core/Src/main.c:369:20: error: 'new_s1' undeclared (first use in this function); did you mean 'new_s2'?
+  369 |                 if(new_s1 == 1) {
+      |                    ^~~~~~
+      |                    new_s2
+../Core/Src/main.c:369:20: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c:362:18: warning: unused variable 'new_s2' [-Wunused-variable]
+  362 |         uint32_t new_s2 = LL_GPIO_IsInputPinSet(S2_GPIO_Port, S2_Pin);
+      |                  ^~~~~~
+make: *** [Core/Src/subdir.mk:31: Core/Src/main.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+12:35:32 **** Incremental Build of configuration Debug for project cv2 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:102:17: warning: implicit declaration of function 'blikac' [-Wimplicit-function-declaration]
+  102 |                 blikac();
+      |                 ^~~~~~
+../Core/Src/main.c:103:17: warning: implicit declaration of function 'dbnc' [-Wimplicit-function-declaration]
+  103 |                 dbnc();
+      |                 ^~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:294:6: warning: conflicting types for 'blikac'; have 'void(void)'
+  294 | void blikac(void)
+      |      ^~~~~~
+../Core/Src/main.c:102:17: note: previous implicit declaration of 'blikac' with type 'void(void)'
+  102 |                 blikac();
+      |                 ^~~~~~
+../Core/Src/main.c:336:6: warning: conflicting types for 'dbnc'; have 'void(void)'
+  336 | void dbnc(void)
+      |      ^~~~
+../Core/Src/main.c:103:17: note: previous implicit declaration of 'dbnc' with type 'void(void)'
+  103 |                 dbnc();
+      |                 ^~~~
+arm-none-eabi-gcc -o "cv2.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Temp\xpecon00\MPC-MKS\cv2\cv2\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cv2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: cv2.elf
+ 
+arm-none-eabi-size   cv2.elf 
+arm-none-eabi-objdump -h -S  cv2.elf  > "cv2.list"
+   text	   data	    bss	    dec	    hex	filename
+   5312	     16	   1584	   6912	   1b00	cv2.elf
+Finished building: default.size.stdout
+ 
+Finished building: cv2.list
+ 
+12:36:12 **** Incremental Build of configuration Debug for project cv2 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:102:17: warning: implicit declaration of function 'blikac' [-Wimplicit-function-declaration]
+  102 |                 blikac();
+      |                 ^~~~~~
+../Core/Src/main.c:103:17: warning: implicit declaration of function 'dbnc' [-Wimplicit-function-declaration]
+  103 |                 dbnc();
+      |                 ^~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:294:6: warning: conflicting types for 'blikac'; have 'void(void)'
+  294 | void blikac(void)
+      |      ^~~~~~
+../Core/Src/main.c:102:17: note: previous implicit declaration of 'blikac' with type 'void(void)'
+  102 |                 blikac();
+      |                 ^~~~~~
+../Core/Src/main.c:336:6: warning: conflicting types for 'dbnc'; have 'void(void)'
+  336 | void dbnc(void)
+      |      ^~~~
+../Core/Src/main.c:103:17: note: previous implicit declaration of 'dbnc' with type 'void(void)'
+  103 |                 dbnc();
+      |                 ^~~~
+arm-none-eabi-gcc -o "cv2.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Temp\xpecon00\MPC-MKS\cv2\cv2\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cv2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: cv2.elf
+ 
+arm-none-eabi-size   cv2.elf 
+arm-none-eabi-objdump -h -S  cv2.elf  > "cv2.list"
+   text	   data	    bss	    dec	    hex	filename
+   5312	     16	   1584	   6912	   1b00	cv2.elf
+Finished building: default.size.stdout
+ 
+Finished building: cv2.list
+ 
+12:36:31 **** Incremental Build of configuration Debug for project cv2 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:102:17: warning: implicit declaration of function 'blikac' [-Wimplicit-function-declaration]
+  102 |                 blikac();
+      |                 ^~~~~~
+../Core/Src/main.c:103:17: warning: implicit declaration of function 'dbnc' [-Wimplicit-function-declaration]
+  103 |                 dbnc();
+      |                 ^~~~
+../Core/Src/main.c:104:17: warning: implicit declaration of function 'dbnc1' [-Wimplicit-function-declaration]
+  104 |                 dbnc1();
+      |                 ^~~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:295:6: warning: conflicting types for 'blikac'; have 'void(void)'
+  295 | void blikac(void)
+      |      ^~~~~~
+../Core/Src/main.c:102:17: note: previous implicit declaration of 'blikac' with type 'void(void)'
+  102 |                 blikac();
+      |                 ^~~~~~
+../Core/Src/main.c:337:6: warning: conflicting types for 'dbnc'; have 'void(void)'
+  337 | void dbnc(void)
+      |      ^~~~
+../Core/Src/main.c:103:17: note: previous implicit declaration of 'dbnc' with type 'void(void)'
+  103 |                 dbnc();
+      |                 ^~~~
+../Core/Src/main.c:361:6: warning: conflicting types for 'dbnc1'; have 'void(void)'
+  361 | void dbnc1(void)
+      |      ^~~~~
+../Core/Src/main.c:104:17: note: previous implicit declaration of 'dbnc1' with type 'void(void)'
+  104 |                 dbnc1();
+      |                 ^~~~~
+arm-none-eabi-gcc -o "cv2.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Temp\xpecon00\MPC-MKS\cv2\cv2\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cv2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: cv2.elf
+ 
+arm-none-eabi-size   cv2.elf 
+arm-none-eabi-objdump -h -S  cv2.elf  > "cv2.list"
+   text	   data	    bss	    dec	    hex	filename
+   5476	     16	   1592	   7084	   1bac	cv2.elf
+Finished building: default.size.stdout
+ 
+Finished building: cv2.list
+ 
+12:37:20 **** Incremental Build of configuration Debug for project cv2 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:102:17: warning: implicit declaration of function 'blikac' [-Wimplicit-function-declaration]
+  102 |                 blikac();
+      |                 ^~~~~~
+../Core/Src/main.c:103:17: warning: implicit declaration of function 'dbnc' [-Wimplicit-function-declaration]
+  103 |                 dbnc();
+      |                 ^~~~
+../Core/Src/main.c:104:17: warning: implicit declaration of function 'dbnc1' [-Wimplicit-function-declaration]
+  104 |                 dbnc1();
+      |                 ^~~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:295:6: warning: conflicting types for 'blikac'; have 'void(void)'
+  295 | void blikac(void)
+      |      ^~~~~~
+../Core/Src/main.c:102:17: note: previous implicit declaration of 'blikac' with type 'void(void)'
+  102 |                 blikac();
+      |                 ^~~~~~
+../Core/Src/main.c:337:6: warning: conflicting types for 'dbnc'; have 'void(void)'
+  337 | void dbnc(void)
+      |      ^~~~
+../Core/Src/main.c:103:17: note: previous implicit declaration of 'dbnc' with type 'void(void)'
+  103 |                 dbnc();
+      |                 ^~~~
+../Core/Src/main.c:361:6: warning: conflicting types for 'dbnc1'; have 'void(void)'
+  361 | void dbnc1(void)
+      |      ^~~~~
+../Core/Src/main.c:104:17: note: previous implicit declaration of 'dbnc1' with type 'void(void)'
+  104 |                 dbnc1();
+      |                 ^~~~~
+arm-none-eabi-gcc -o "cv2.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Temp\xpecon00\MPC-MKS\cv2\cv2\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cv2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: cv2.elf
+ 
+arm-none-eabi-size   cv2.elf 
+arm-none-eabi-objdump -h -S  cv2.elf  > "cv2.list"
+   text	   data	    bss	    dec	    hex	filename
+   5476	     16	   1592	   7084	   1bac	cv2.elf
+Finished building: default.size.stdout
+ 
+Finished building: cv2.list
+ 
+12:37:54 **** Incremental Build of configuration Debug for project cv2 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:102:17: warning: implicit declaration of function 'blikac' [-Wimplicit-function-declaration]
+  102 |                 blikac();
+      |                 ^~~~~~
+../Core/Src/main.c:103:17: warning: implicit declaration of function 'dbnc' [-Wimplicit-function-declaration]
+  103 |                 dbnc();
+      |                 ^~~~
+../Core/Src/main.c:104:17: warning: implicit declaration of function 'dbnc1' [-Wimplicit-function-declaration]
+  104 |                 dbnc1();
+      |                 ^~~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:295:6: warning: conflicting types for 'blikac'; have 'void(void)'
+  295 | void blikac(void)
+      |      ^~~~~~
+../Core/Src/main.c:102:17: note: previous implicit declaration of 'blikac' with type 'void(void)'
+  102 |                 blikac();
+      |                 ^~~~~~
+../Core/Src/main.c:337:6: warning: conflicting types for 'dbnc'; have 'void(void)'
+  337 | void dbnc(void)
+      |      ^~~~
+../Core/Src/main.c:103:17: note: previous implicit declaration of 'dbnc' with type 'void(void)'
+  103 |                 dbnc();
+      |                 ^~~~
+arm-none-eabi-gcc -o "cv2.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Temp\xpecon00\MPC-MKS\cv2\cv2\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cv2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+C:/appz/ST/STM32CubeIDE_1.10.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/bin/ld.exe: ./Core/Src/main.o: in function `main':
+C:/Temp/xpecon00/MPC-MKS/cv2/cv2/Debug/../Core/Src/main.c:104: undefined reference to `dbnc1'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:64: cv2.elf] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+12:38:08 **** Incremental Build of configuration Debug for project cv2 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:102:17: warning: implicit declaration of function 'blikac' [-Wimplicit-function-declaration]
+  102 |                 blikac();
+      |                 ^~~~~~
+../Core/Src/main.c:103:17: warning: implicit declaration of function 'dbnc' [-Wimplicit-function-declaration]
+  103 |                 dbnc();
+      |                 ^~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:295:6: warning: conflicting types for 'blikac'; have 'void(void)'
+  295 | void blikac(void)
+      |      ^~~~~~
+../Core/Src/main.c:102:17: note: previous implicit declaration of 'blikac' with type 'void(void)'
+  102 |                 blikac();
+      |                 ^~~~~~
+../Core/Src/main.c:337:6: warning: conflicting types for 'dbnc'; have 'void(void)'
+  337 | void dbnc(void)
+      |      ^~~~
+../Core/Src/main.c:103:17: note: previous implicit declaration of 'dbnc' with type 'void(void)'
+  103 |                 dbnc();
+      |                 ^~~~
+arm-none-eabi-gcc -o "cv2.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Temp\xpecon00\MPC-MKS\cv2\cv2\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cv2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: cv2.elf
+ 
+arm-none-eabi-size   cv2.elf 
+arm-none-eabi-objdump -h -S  cv2.elf  > "cv2.list"
+   text	   data	    bss	    dec	    hex	filename
+   5312	     16	   1584	   6912	   1b00	cv2.elf
+Finished building: default.size.stdout
+ 
+Finished building: cv2.list
+ 
+12:39:50 **** Incremental Build of configuration Debug for project cv2 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:102:17: warning: implicit declaration of function 'blikac' [-Wimplicit-function-declaration]
+  102 |                 blikac();
+      |                 ^~~~~~
+../Core/Src/main.c:103:17: warning: implicit declaration of function 'dbnc' [-Wimplicit-function-declaration]
+  103 |                 dbnc();
+      |                 ^~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:295:6: warning: conflicting types for 'blikac'; have 'void(void)'
+  295 | void blikac(void)
+      |      ^~~~~~
+../Core/Src/main.c:102:17: note: previous implicit declaration of 'blikac' with type 'void(void)'
+  102 |                 blikac();
+      |                 ^~~~~~
+../Core/Src/main.c:338:6: warning: conflicting types for 'dbnc'; have 'void(void)'
+  338 | void dbnc(void)
+      |      ^~~~
+../Core/Src/main.c:103:17: note: previous implicit declaration of 'dbnc' with type 'void(void)'
+  103 |                 dbnc();
+      |                 ^~~~
+arm-none-eabi-gcc -o "cv2.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Temp\xpecon00\MPC-MKS\cv2\cv2\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cv2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: cv2.elf
+ 
+arm-none-eabi-size   cv2.elf 
+arm-none-eabi-objdump -h -S  cv2.elf  > "cv2.list"
+   text	   data	    bss	    dec	    hex	filename
+   5312	     16	   1584	   6912	   1b00	cv2.elf
+Finished building: default.size.stdout
+ 
+Finished building: cv2.list
+ 
+12:40:45 **** Incremental Build of configuration Debug for project cv2 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:102:17: warning: implicit declaration of function 'blikac' [-Wimplicit-function-declaration]
+  102 |                 blikac();
+      |                 ^~~~~~
+../Core/Src/main.c:103:17: warning: implicit declaration of function 'dbnc' [-Wimplicit-function-declaration]
+  103 |                 dbnc();
+      |                 ^~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:295:6: warning: conflicting types for 'blikac'; have 'void(void)'
+  295 | void blikac(void)
+      |      ^~~~~~
+../Core/Src/main.c:102:17: note: previous implicit declaration of 'blikac' with type 'void(void)'
+  102 |                 blikac();
+      |                 ^~~~~~
+../Core/Src/main.c:338:6: warning: conflicting types for 'dbnc'; have 'void(void)'
+  338 | void dbnc(void)
+      |      ^~~~
+../Core/Src/main.c:103:17: note: previous implicit declaration of 'dbnc' with type 'void(void)'
+  103 |                 dbnc();
+      |                 ^~~~
+arm-none-eabi-gcc -o "cv2.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Temp\xpecon00\MPC-MKS\cv2\cv2\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cv2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: cv2.elf
+ 
+arm-none-eabi-size   cv2.elf 
+arm-none-eabi-objdump -h -S  cv2.elf  > "cv2.list"
+   text	   data	    bss	    dec	    hex	filename
+   5312	     16	   1584	   6912	   1b00	cv2.elf
+Finished building: default.size.stdout
+ 
+Finished building: cv2.list
+ 
+12:45:16 **** Incremental Build of configuration Debug for project cv2 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "cv2.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Temp\xpecon00\MPC-MKS\cv2\cv2\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cv2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: cv2.elf
+ 
+arm-none-eabi-size   cv2.elf 
+arm-none-eabi-objdump -h -S  cv2.elf  > "cv2.list"
+   text	   data	    bss	    dec	    hex	filename
+   5316	     16	   1584	   6916	   1b04	cv2.elf
+Finished building: default.size.stdout
+ 
+Finished building: cv2.list
+ 
