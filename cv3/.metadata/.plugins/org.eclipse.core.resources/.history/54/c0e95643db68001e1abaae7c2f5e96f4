@@ -1,0 +1,20 @@
+/*
+ * sct.c
+ *
+ *  Created on: Oct 12, 2023
+ *      Author: xpecon00
+ */
+
+#include "main.h"
+#include "sct.h"
+
+void sct_init(void)
+{
+sct_led(0);
+}
+
+void sct_led(uint32_t value)
+{
+	HAL_GPIO_WritePin(SCT_CLK_GPIO_Port, SCT_CLK_Pin, 1);
+
+}

@@ -1220,3 +1220,86 @@
 2023-10-12 09:55:27,290 [INFO] CADModel:165 - CPN selected for project levelSTM32F030R8T6
 2023-10-12 09:55:27,290 [INFO] CADModel:114 - Register for checkConnection events
 2023-10-12 09:55:27,339 [INFO] OpenFileManager:328 - Restore cursor
+2023-10-12 10:01:50,554 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 390439928 Bytes (513802240)
+2023-10-12 10:01:52,390 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 407520208 Bytes (513802240)
+2023-10-12 10:01:55,230 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 170697144 Bytes (513802240)
+2023-10-12 10:01:55,834 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: NVIC
+2023-10-12 10:01:55,834 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: USART
+2023-10-12 10:01:55,834 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SYS
+2023-10-12 10:01:55,835 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: GPIO
+2023-10-12 10:01:55,835 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: RCC
+2023-10-12 10:01:55,836 [INFO] CodeGenerator:799 - code generatio: config db path: C:\appz\ST\STM32CubeIDE_1.10.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.9.1.202307191849\\db\
+2023-10-12 10:01:56,065 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Temp\xpecon00\MPC-MKS\cv3\cv3\MXTmpFiles\license.tmp_save
+2023-10-12 10:01:56,548 [INFO] CodeEngine:279 - Generated code: C:\Temp\xpecon00\MPC-MKS\cv3\cv3\MXTmpFiles\license.tmp
+2023-10-12 10:01:56,688 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Temp\xpecon00\MPC-MKS\cv3\cv3\MXTmpFiles\gpio.tmp_save
+2023-10-12 10:01:56,944 [INFO] CodeEngine:279 - Generated code: C:\Temp\xpecon00\MPC-MKS\cv3\cv3\MXTmpFiles\gpio.tmp
+2023-10-12 10:01:57,121 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Temp\xpecon00\MPC-MKS\cv3\cv3\Core\Src\stm32f0xx_it.c_save
+2023-10-12 10:01:57,419 [INFO] CodeEngine:279 - Generated code: C:\Temp\xpecon00\MPC-MKS\cv3\cv3\Core\Src\stm32f0xx_it.c
+2023-10-12 10:01:57,426 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Temp\xpecon00\MPC-MKS\cv3\cv3\Core\Inc\stm32f0xx_it.h_save
+2023-10-12 10:01:57,764 [INFO] CodeEngine:279 - Generated code: C:\Temp\xpecon00\MPC-MKS\cv3\cv3\Core\Inc\stm32f0xx_it.h
+2023-10-12 10:01:57,777 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Temp\xpecon00\MPC-MKS\cv3\cv3\Core\Src\stm32f0xx_hal_msp.c_save
+2023-10-12 10:01:57,989 [INFO] CodeEngine:279 - Generated code: C:\Temp\xpecon00\MPC-MKS\cv3\cv3\Core\Src\stm32f0xx_hal_msp.c
+2023-10-12 10:01:57,994 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Temp\xpecon00\MPC-MKS\cv3\cv3\MXTmpFiles\system.tmp_save
+2023-10-12 10:01:58,086 [INFO] CodeEngine:279 - Generated code: C:\Temp\xpecon00\MPC-MKS\cv3\cv3\MXTmpFiles\system.tmp
+2023-10-12 10:01:58,096 [INFO] CodeEngine:311 - oldGeneratedFile, C:\Temp\xpecon00\MPC-MKS\cv3\cv3\Core\Inc\stm32f0xx_hal_conf.h_save
+2023-10-12 10:01:58,260 [INFO] CodeEngine:335 - Generated code: C:\Temp\xpecon00\MPC-MKS\cv3\cv3\Core\Inc\stm32f0xx_hal_conf.h
+2023-10-12 10:01:58,315 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Temp\xpecon00\MPC-MKS\cv3\cv3\Core\Inc\main.h_save
+2023-10-12 10:01:58,492 [INFO] CodeEngine:279 - Generated code: C:\Temp\xpecon00\MPC-MKS\cv3\cv3\Core\Inc\main.h
+2023-10-12 10:01:58,498 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Temp\xpecon00\MPC-MKS\cv3\cv3\Core\Src\main.c_save
+2023-10-12 10:01:58,861 [INFO] CodeEngine:279 - Generated code: C:\Temp\xpecon00\MPC-MKS\cv3\cv3\Core\Src\main.c
+2023-10-12 10:01:59,573 [INFO] ProjectBuilder:3064 - Time for Copy HAL[1] : 158mS.
+2023-10-12 10:01:59,579 [INFO] ProjectBuilder:4404 - Project Generator version: 4.1.0
+2023-10-12 10:01:59,965 [INFO] ConfigFileManager:1457 - The Die is : DIE440
+2023-10-12 10:01:59,981 [INFO] ApiDbMcu:507 - Load IP Config File for FATFS
+2023-10-12 10:02:00,027 [INFO] ApiDbMcu:507 - Load IP Config File for FREERTOS
+2023-10-12 10:02:00,975 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] 
+2023-10-12 10:02:05,370 [INFO] ProjectBuilder:4626 - Time for Generating toolchain IDE Files: 5791mS.
+2023-10-12 10:02:05,371 [INFO] ProjectBuilder:2935 - Time for Copy CMSIS : 1mS.
+2023-10-12 10:02:05,373 [INFO] ProjectBuilder:2935 - Time for Copy CMSIS : 0mS.
+2023-10-12 11:47:28,656 [INFO] Gpio:273 - dependency for GPIO [RCC, SYS, TIM1, USART2]
+2023-10-12 11:47:32,632 [INFO] Gpio:273 - dependency for GPIO [RCC, SYS, TIM1, USART2]
+2023-10-12 11:47:33,288 [INFO] DmaTabbedPanel:205 - Cannot restore the selected Tab for DMA
+2023-10-12 11:47:37,942 [INFO] Gpio:273 - dependency for GPIO [RCC, SYS, TIM1, USART2]
+2023-10-12 11:49:02,134 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,506x274,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2023-10-12 11:49:45,955 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2023-10-12 11:49:48,382 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2023-10-12 11:50:05,918 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2023-10-12 11:50:07,183 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2023-10-12 11:50:20,668 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2023-10-12 11:50:58,228 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2023-10-12 11:51:08,830 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 501909656 Bytes (713031680)
+2023-10-12 11:51:10,294 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 520255040 Bytes (713031680)
+2023-10-12 11:51:11,483 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 552267168 Bytes (713031680)
+2023-10-12 11:51:11,682 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: NVIC
+2023-10-12 11:51:11,682 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: USART
+2023-10-12 11:51:11,683 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: TIM1_8F0
+2023-10-12 11:51:11,683 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SYS
+2023-10-12 11:51:11,683 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: GPIO
+2023-10-12 11:51:11,683 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: RCC
+2023-10-12 11:51:11,684 [INFO] CodeGenerator:799 - code generatio: config db path: C:\appz\ST\STM32CubeIDE_1.10.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.9.1.202307191849\\db\
+2023-10-12 11:51:11,910 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Temp\xpecon00\MPC-MKS\cv3\cv3\MXTmpFiles\license.tmp_save
+2023-10-12 11:51:12,263 [INFO] CodeEngine:279 - Generated code: C:\Temp\xpecon00\MPC-MKS\cv3\cv3\MXTmpFiles\license.tmp
+2023-10-12 11:51:12,323 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Temp\xpecon00\MPC-MKS\cv3\cv3\MXTmpFiles\gpio.tmp_save
+2023-10-12 11:51:12,481 [INFO] CodeEngine:279 - Generated code: C:\Temp\xpecon00\MPC-MKS\cv3\cv3\MXTmpFiles\gpio.tmp
+2023-10-12 11:51:12,767 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Temp\xpecon00\MPC-MKS\cv3\cv3\Core\Src\stm32f0xx_it.c_save
+2023-10-12 11:51:13,066 [INFO] CodeEngine:279 - Generated code: C:\Temp\xpecon00\MPC-MKS\cv3\cv3\Core\Src\stm32f0xx_it.c
+2023-10-12 11:51:13,072 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Temp\xpecon00\MPC-MKS\cv3\cv3\Core\Inc\stm32f0xx_it.h_save
+2023-10-12 11:51:13,180 [INFO] CodeEngine:279 - Generated code: C:\Temp\xpecon00\MPC-MKS\cv3\cv3\Core\Inc\stm32f0xx_it.h
+2023-10-12 11:51:13,198 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Temp\xpecon00\MPC-MKS\cv3\cv3\Core\Src\stm32f0xx_hal_msp.c_save
+2023-10-12 11:51:13,368 [INFO] CodeEngine:279 - Generated code: C:\Temp\xpecon00\MPC-MKS\cv3\cv3\Core\Src\stm32f0xx_hal_msp.c
+2023-10-12 11:51:13,376 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Temp\xpecon00\MPC-MKS\cv3\cv3\MXTmpFiles\system.tmp_save
+2023-10-12 11:51:13,463 [INFO] CodeEngine:279 - Generated code: C:\Temp\xpecon00\MPC-MKS\cv3\cv3\MXTmpFiles\system.tmp
+2023-10-12 11:51:13,486 [INFO] CodeEngine:311 - oldGeneratedFile, C:\Temp\xpecon00\MPC-MKS\cv3\cv3\Core\Inc\stm32f0xx_hal_conf.h_save
+2023-10-12 11:51:13,618 [INFO] CodeEngine:335 - Generated code: C:\Temp\xpecon00\MPC-MKS\cv3\cv3\Core\Inc\stm32f0xx_hal_conf.h
+2023-10-12 11:51:13,652 [WARN] IPConfigManager:3431 - IP not found : TIM
+2023-10-12 11:51:13,652 [WARN] CodeGenerator:3760 - IP not found : null
+2023-10-12 11:51:13,683 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Temp\xpecon00\MPC-MKS\cv3\cv3\Core\Inc\main.h_save
+2023-10-12 11:51:13,791 [INFO] CodeEngine:279 - Generated code: C:\Temp\xpecon00\MPC-MKS\cv3\cv3\Core\Inc\main.h
+2023-10-12 11:51:13,808 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Temp\xpecon00\MPC-MKS\cv3\cv3\Core\Src\main.c_save
+2023-10-12 11:51:13,962 [INFO] CodeEngine:279 - Generated code: C:\Temp\xpecon00\MPC-MKS\cv3\cv3\Core\Src\main.c
+2023-10-12 11:51:14,502 [INFO] ProjectBuilder:3064 - Time for Copy HAL[1] : 138mS.
+2023-10-12 11:51:14,506 [INFO] ProjectBuilder:4404 - Project Generator version: 4.1.0
+2023-10-12 11:51:14,692 [INFO] ConfigFileManager:1457 - The Die is : DIE440
+2023-10-12 11:51:16,612 [INFO] ProjectBuilder:4626 - Time for Generating toolchain IDE Files: 2106mS.
+2023-10-12 11:51:16,613 [INFO] ProjectBuilder:2935 - Time for Copy CMSIS : 1mS.
+2023-10-12 11:51:16,615 [INFO] ProjectBuilder:2935 - Time for Copy CMSIS : 0mS.
