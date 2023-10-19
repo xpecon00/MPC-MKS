@@ -1,0 +1,30 @@
+12:54:43 **** Incremental Build of configuration Debug for project cv4 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:127:18: warning: unused variable 'new_s2' [-Wunused-variable]
+  127 |         uint32_t new_s2 = HAL_GPIO_ReadPin(S1_GPIO_Port, S1_Pin);
+      |                  ^~~~~~
+../Core/Src/main.c:126:18: warning: unused variable 'new_s1' [-Wunused-variable]
+  126 |         uint32_t new_s1 = HAL_GPIO_ReadPin(S1_GPIO_Port, S1_Pin);
+      |                  ^~~~~~
+../Core/Src/main.c:125:18: warning: unused variable 'old_s2' [-Wunused-variable]
+  125 |         uint32_t old_s2;
+      |                  ^~~~~~
+../Core/Src/main.c:124:18: warning: unused variable 'old_s1' [-Wunused-variable]
+  124 |         uint32_t old_s1;
+      |                  ^~~~~~
+arm-none-eabi-gcc -o "cv4.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Temp\xpecon00\MPC-MKS\cv4\cv4\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cv4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: cv4.elf
+ 
+arm-none-eabi-size   cv4.elf 
+arm-none-eabi-objdump -h -S  cv4.elf  > "cv4.list"
+   text	   data	    bss	    dec	    hex	filename
+  11516	     20	   1788	  13324	   340c	cv4.elf
+Finished building: default.size.stdout
+ 
+Finished building: cv4.list
+ 
+
+12:54:44 Build Finished. 0 errors, 4 warnings. (took 870ms)
+
