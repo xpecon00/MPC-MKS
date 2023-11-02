@@ -1,0 +1,10 @@
+10:17:22 **** Incremental Build of configuration Debug for project cv3 ****
+make -j4 all 
+arm-none-eabi-size   cv3.elf 
+   text	   data	    bss	    dec	    hex	filename
+   9024	     20	   1772	  10816	   2a40	cv3.elf
+Finished building: default.size.stdout
+ 
+
+10:17:23 Build Finished. 0 errors, 0 warnings. (took 287ms)
+
