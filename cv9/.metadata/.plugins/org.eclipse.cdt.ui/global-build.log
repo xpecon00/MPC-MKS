@@ -613,3 +613,942 @@ Finished building: default.size.stdout
  
 Finished building: cv9.list
  
+11:51:20 **** Incremental Build of configuration Debug for project cv9 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:114:15: error: unknown type name 'unit8_t'; did you mean 'uint8_t'?
+  114 |           for(unit8_t i = 0; i < 6;  i++ ){
+      |               ^~~~~~~
+      |               uint8_t
+../Core/Src/main.c:115:19: error: called object 'key' is not a function or function pointer
+  115 |                   key(i) = code[i];
+      |                   ^~~
+../Core/Src/main.c:48:24: note: declared here
+   48 | static volatile int8_t key;
+      |                        ^~~
+../Core/Src/main.c:115:28: error: 'code' undeclared (first use in this function)
+  115 |                   key(i) = code[i];
+      |                            ^~~~
+../Core/Src/main.c:115:28: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c: In function 'HAL_TIM_PeriodElapsedCallback':
+../Core/Src/main.c:384:19: warning: unused variable 'code' [-Wunused-variable]
+  384 |  static const int code[5] = {7, 9, 3, 2, 12};
+      |                   ^~~~
+At top level:
+../Core/Src/main.c:384:19: warning: 'code' defined but not used [-Wunused-const-variable=]
+make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+11:52:09 **** Incremental Build of configuration Debug for project cv9 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:115:25: error: 'code' undeclared (first use in this function)
+  115 |                   key = code[i];
+      |                         ^~~~
+../Core/Src/main.c:115:25: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c: In function 'HAL_TIM_PeriodElapsedCallback':
+../Core/Src/main.c:384:19: warning: unused variable 'code' [-Wunused-variable]
+  384 |  static const int code[5] = {7, 9, 3, 2, 12};
+      |                   ^~~~
+At top level:
+../Core/Src/main.c:384:19: warning: 'code' defined but not used [-Wunused-const-variable=]
+make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+11:53:32 **** Incremental Build of configuration Debug for project cv9 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "cv9.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Temp\xpecon00\MPC-MKS\cv9\cv9\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cv9.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: cv9.elf
+ 
+arm-none-eabi-size   cv9.elf 
+arm-none-eabi-objdump -h -S  cv9.elf  > "cv9.list"
+   text	   data	    bss	    dec	    hex	filename
+  11548	     20	   1716	  13284	   33e4	cv9.elf
+Finished building: default.size.stdout
+ 
+Finished building: cv9.list
+ 
+11:54:24 **** Incremental Build of configuration Debug for project cv9 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:115:19: error: called object 'key' is not a function or function pointer
+  115 |                   key(i) = code[i];
+      |                   ^~~
+../Core/Src/main.c:48:24: note: declared here
+   48 | static volatile int8_t key;
+      |                        ^~~
+make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+11:54:32 **** Incremental Build of configuration Debug for project cv9 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "cv9.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Temp\xpecon00\MPC-MKS\cv9\cv9\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cv9.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: cv9.elf
+ 
+arm-none-eabi-size   cv9.elf 
+arm-none-eabi-objdump -h -S  cv9.elf  > "cv9.list"
+   text	   data	    bss	    dec	    hex	filename
+  15784	    112	   2056	  17952	   4620	cv9.elf
+Finished building: default.size.stdout
+ 
+Finished building: cv9.list
+ 
+12:01:25 **** Incremental Build of configuration Debug for project cv9 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:112:36: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+  112 |           static const int code[5] {7,9,3,2,12};
+      |                                    ^
+../Core/Src/main.c:112:38: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+  112 |           static const int code[5] {7,9,3,2,12};
+      |                                      ^
+../Core/Src/main.c:112:40: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+  112 |           static const int code[5] {7,9,3,2,12};
+      |                                        ^
+../Core/Src/main.c:112:42: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+  112 |           static const int code[5] {7,9,3,2,12};
+      |                                          ^
+../Core/Src/main.c:112:44: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+  112 |           static const int code[5] {7,9,3,2,12};
+      |                                            ^
+../Core/Src/main.c:112:44: warning: statement with no effect [-Wunused-value]
+../Core/Src/main.c:112:47: error: expected ';' before '}' token
+  112 |           static const int code[5] {7,9,3,2,12};
+      |                                               ^
+      |                                               ;
+../Core/Src/main.c:115:37: error: 'code' undeclared (first use in this function)
+  115 |                           if(key == code[i]){
+      |                                     ^~~~
+../Core/Src/main.c:115:37: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+12:02:00 **** Incremental Build of configuration Debug for project cv9 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "cv9.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Temp\xpecon00\MPC-MKS\cv9\cv9\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cv9.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: cv9.elf
+ 
+arm-none-eabi-size   cv9.elf 
+arm-none-eabi-objdump -h -S  cv9.elf  > "cv9.list"
+   text	   data	    bss	    dec	    hex	filename
+  15788	    112	   2056	  17956	   4624	cv9.elf
+Finished building: default.size.stdout
+ 
+Finished building: cv9.list
+ 
+12:06:16 **** Incremental Build of configuration Debug for project cv9 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:117:33: error: called object 'z' is not a function or function pointer
+  117 |                           key = z(i);
+      |                                 ^
+../Core/Src/main.c:49:24: note: declared here
+   49 | static volatile int8_t z;
+      |                        ^
+make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+12:06:35 **** Incremental Build of configuration Debug for project cv9 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:117:34: error: subscripted value is neither array nor pointer nor vector
+  117 |                           key = z[i];
+      |                                  ^
+make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+12:06:45 **** Incremental Build of configuration Debug for project cv9 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "cv9.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Temp\xpecon00\MPC-MKS\cv9\cv9\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cv9.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: cv9.elf
+ 
+arm-none-eabi-size   cv9.elf 
+arm-none-eabi-objdump -h -S  cv9.elf  > "cv9.list"
+   text	   data	    bss	    dec	    hex	filename
+  15804	    112	   2056	  17972	   4634	cv9.elf
+Finished building: default.size.stdout
+ 
+Finished building: cv9.list
+ 
+12:08:32 **** Incremental Build of configuration Debug for project cv9 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "cv9.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Temp\xpecon00\MPC-MKS\cv9\cv9\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cv9.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: cv9.elf
+ 
+arm-none-eabi-size   cv9.elf 
+arm-none-eabi-objdump -h -S  cv9.elf  > "cv9.list"
+   text	   data	    bss	    dec	    hex	filename
+  15800	    112	   2056	  17968	   4630	cv9.elf
+Finished building: default.size.stdout
+ 
+Finished building: cv9.list
+ 
+12:09:03 **** Incremental Build of configuration Debug for project cv9 ****
+make -j4 all 
+arm-none-eabi-size   cv9.elf 
+   text	   data	    bss	    dec	    hex	filename
+  15800	    112	   2056	  17968	   4630	cv9.elf
+Finished building: default.size.stdout
+ 
+12:09:23 **** Incremental Build of configuration Debug for project cv9 ****
+make -j4 all 
+arm-none-eabi-size   cv9.elf 
+   text	   data	    bss	    dec	    hex	filename
+  15800	    112	   2056	  17968	   4630	cv9.elf
+Finished building: default.size.stdout
+ 
+12:09:38 **** Incremental Build of configuration Debug for project cv9 ****
+make -j4 all 
+arm-none-eabi-size   cv9.elf 
+   text	   data	    bss	    dec	    hex	filename
+  15800	    112	   2056	  17968	   4630	cv9.elf
+Finished building: default.size.stdout
+ 
+12:10:26 **** Incremental Build of configuration Debug for project cv9 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "cv9.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Temp\xpecon00\MPC-MKS\cv9\cv9\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cv9.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: cv9.elf
+ 
+arm-none-eabi-size   cv9.elf 
+arm-none-eabi-objdump -h -S  cv9.elf  > "cv9.list"
+   text	   data	    bss	    dec	    hex	filename
+  15800	    112	   2056	  17968	   4630	cv9.elf
+Finished building: default.size.stdout
+ 
+Finished building: cv9.list
+ 
+12:12:39 **** Incremental Build of configuration Debug for project cv9 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:117:33: error: subscripted value is neither array nor pointer nor vector
+  117 |                           if(key[i] == code[i]){
+      |                                 ^
+make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+12:12:52 **** Incremental Build of configuration Debug for project cv9 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:117:33: error: subscripted value is neither array nor pointer nor vector
+  117 |                           if(key[i] == code[i]){
+      |                                 ^
+make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+12:14:33 **** Incremental Build of configuration Debug for project cv9 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:119:28: warning: format '%d' expects argument of type 'int', but argument 2 has type 'const int *' [-Wformat=]
+  119 |                   printf("%d\n", code);
+      |                           ~^     ~~~~
+      |                            |     |
+      |                            int   const int *
+      |                           %ls
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:133:1: error: expected identifier or '(' before '}' token
+  133 | }
+      | ^
+make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+12:14:43 **** Incremental Build of configuration Debug for project cv9 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:119:28: warning: format '%d' expects argument of type 'int', but argument 2 has type 'const int *' [-Wformat=]
+  119 |                   printf("%d\n", code);
+      |                           ~^     ~~~~
+      |                            |     |
+      |                            int   const int *
+      |                           %ls
+arm-none-eabi-gcc -o "cv9.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Temp\xpecon00\MPC-MKS\cv9\cv9\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cv9.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: cv9.elf
+ 
+arm-none-eabi-size   cv9.elf 
+arm-none-eabi-objdump -h -S  cv9.elf  > "cv9.list"
+   text	   data	    bss	    dec	    hex	filename
+  15776	    112	   2056	  17944	   4618	cv9.elf
+Finished building: default.size.stdout
+ 
+Finished building: cv9.list
+ 
+12:16:30 **** Incremental Build of configuration Debug for project cv9 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:119:28: warning: format '%d' expects argument of type 'int', but argument 2 has type 'volatile int *' [-Wformat=]
+  119 |                   printf("%d\n", code);
+      |                           ~^     ~~~~
+      |                            |     |
+      |                            int   volatile int *
+      |                           %ls
+arm-none-eabi-gcc -o "cv9.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Temp\xpecon00\MPC-MKS\cv9\cv9\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cv9.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: cv9.elf
+ 
+arm-none-eabi-size   cv9.elf 
+arm-none-eabi-objdump -h -S  cv9.elf  > "cv9.list"
+   text	   data	    bss	    dec	    hex	filename
+  15756	    112	   2072	  17940	   4614	cv9.elf
+Finished building: default.size.stdout
+ 
+Finished building: cv9.list
+ 
+12:16:47 **** Incremental Build of configuration Debug for project cv9 ****
+make -j4 all 
+arm-none-eabi-size   cv9.elf 
+   text	   data	    bss	    dec	    hex	filename
+  15756	    112	   2072	  17940	   4614	cv9.elf
+Finished building: default.size.stdout
+ 
+12:16:51 **** Incremental Build of configuration Debug for project cv9 ****
+make -j4 all 
+arm-none-eabi-size   cv9.elf 
+   text	   data	    bss	    dec	    hex	filename
+  15756	    112	   2072	  17940	   4614	cv9.elf
+Finished building: default.size.stdout
+ 
+12:18:25 **** Incremental Build of configuration Debug for project cv9 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:119:28: warning: format '%d' expects argument of type 'int', but argument 2 has type 'volatile int *' [-Wformat=]
+  119 |                   printf("%d\n", code);
+      |                           ~^     ~~~~
+      |                            |     |
+      |                            int   volatile int *
+      |                           %ls
+arm-none-eabi-gcc -o "cv9.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Temp\xpecon00\MPC-MKS\cv9\cv9\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cv9.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: cv9.elf
+ 
+arm-none-eabi-size   cv9.elf 
+arm-none-eabi-objdump -h -S  cv9.elf  > "cv9.list"
+   text	   data	    bss	    dec	    hex	filename
+  15764	    112	   2072	  17948	   461c	cv9.elf
+Finished building: default.size.stdout
+ 
+Finished building: cv9.list
+ 
+12:19:40 **** Incremental Build of configuration Debug for project cv9 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:120:28: warning: format '%d' expects argument of type 'int', but argument 2 has type 'volatile int *' [-Wformat=]
+  120 |                   printf("%d\n", code);
+      |                           ~^     ~~~~
+      |                            |     |
+      |                            int   volatile int *
+      |                           %ls
+arm-none-eabi-gcc -o "cv9.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Temp\xpecon00\MPC-MKS\cv9\cv9\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cv9.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: cv9.elf
+ 
+arm-none-eabi-size   cv9.elf 
+arm-none-eabi-objdump -h -S  cv9.elf  > "cv9.list"
+   text	   data	    bss	    dec	    hex	filename
+  15764	    112	   2072	  17948	   461c	cv9.elf
+Finished building: default.size.stdout
+ 
+Finished building: cv9.list
+ 
+12:20:06 **** Incremental Build of configuration Debug for project cv9 ****
+make -j4 all 
+arm-none-eabi-size   cv9.elf 
+   text	   data	    bss	    dec	    hex	filename
+  15764	    112	   2072	  17948	   461c	cv9.elf
+Finished building: default.size.stdout
+ 
+12:25:03 **** Incremental Build of configuration Debug for project cv9 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:116:42: error: 'i' undeclared (first use in this function)
+  116 |                           if(key == code[i]){
+      |                                          ^
+../Core/Src/main.c:116:42: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c:120:28: warning: format '%d' expects argument of type 'int', but argument 2 has type 'volatile uint8_t *' {aka 'volatile unsigned char *'} [-Wformat=]
+  120 |                   printf("%d\n", code);
+      |                           ~^     ~~~~
+      |                            |     |
+      |                            int   volatile uint8_t * {aka volatile unsigned char *}
+      |                           %hhn
+make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+12:25:40 **** Incremental Build of configuration Debug for project cv9 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:117:44: warning: format '%d' expects argument of type 'int', but argument 2 has type 'volatile uint8_t *' {aka 'volatile unsigned char *'} [-Wformat=]
+  117 |                                   printf("%d\n", code);
+      |                                           ~^     ~~~~
+      |                                            |     |
+      |                                            int   volatile uint8_t * {aka volatile unsigned char *}
+      |                                           %hhn
+arm-none-eabi-gcc -o "cv9.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Temp\xpecon00\MPC-MKS\cv9\cv9\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cv9.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: cv9.elf
+ 
+arm-none-eabi-size   cv9.elf 
+arm-none-eabi-objdump -h -S  cv9.elf  > "cv9.list"
+   text	   data	    bss	    dec	    hex	filename
+  15748	    120	   2056	  17924	   4604	cv9.elf
+Finished building: default.size.stdout
+ 
+Finished building: cv9.list
+ 
+12:26:30 **** Incremental Build of configuration Debug for project cv9 ****
+make -j4 all 
+arm-none-eabi-size   cv9.elf 
+   text	   data	    bss	    dec	    hex	filename
+  15748	    120	   2056	  17924	   4604	cv9.elf
+Finished building: default.size.stdout
+ 
+12:29:18 **** Incremental Build of configuration Debug for project cv9 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:117:44: warning: format '%d' expects argument of type 'int', but argument 2 has type 'volatile uint8_t *' {aka 'volatile unsigned char *'} [-Wformat=]
+  117 |                                   printf("%d\n", code);
+      |                                           ~^     ~~~~
+      |                                            |     |
+      |                                            int   volatile uint8_t * {aka volatile unsigned char *}
+      |                                           %hhn
+arm-none-eabi-gcc -o "cv9.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Temp\xpecon00\MPC-MKS\cv9\cv9\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cv9.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: cv9.elf
+ 
+arm-none-eabi-size   cv9.elf 
+arm-none-eabi-objdump -h -S  cv9.elf  > "cv9.list"
+   text	   data	    bss	    dec	    hex	filename
+  15768	    120	   2056	  17944	   4618	cv9.elf
+Finished building: default.size.stdout
+ 
+Finished building: cv9.list
+ 
+12:30:54 **** Incremental Build of configuration Debug for project cv9 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:117:44: warning: format '%d' expects a matching 'int' argument [-Wformat=]
+  117 |                                   printf("%d\nSprávně:");
+      |                                           ~^
+      |                                            |
+      |                                            int
+arm-none-eabi-gcc -o "cv9.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Temp\xpecon00\MPC-MKS\cv9\cv9\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cv9.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: cv9.elf
+ 
+arm-none-eabi-size   cv9.elf 
+arm-none-eabi-objdump -h -S  cv9.elf  > "cv9.list"
+   text	   data	    bss	    dec	    hex	filename
+  15788	    120	   2056	  17964	   462c	cv9.elf
+Finished building: default.size.stdout
+ 
+Finished building: cv9.list
+ 
+12:32:22 **** Incremental Build of configuration Debug for project cv9 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:117:44: warning: format '%d' expects a matching 'int' argument [-Wformat=]
+  117 |                                   printf("%d\nTrue:");
+      |                                           ~^
+      |                                            |
+      |                                            int
+arm-none-eabi-gcc -o "cv9.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Temp\xpecon00\MPC-MKS\cv9\cv9\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cv9.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: cv9.elf
+ 
+arm-none-eabi-size   cv9.elf 
+arm-none-eabi-objdump -h -S  cv9.elf  > "cv9.list"
+   text	   data	    bss	    dec	    hex	filename
+  15784	    120	   2056	  17960	   4628	cv9.elf
+Finished building: default.size.stdout
+ 
+Finished building: cv9.list
+ 
+12:33:10 **** Incremental Build of configuration Debug for project cv9 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:118:50: warning: format '%d' expects a matching 'int' argument [-Wformat=]
+  118 |                                         printf("%d\nTrue:");
+      |                                                 ~^
+      |                                                  |
+      |                                                  int
+arm-none-eabi-gcc -o "cv9.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Temp\xpecon00\MPC-MKS\cv9\cv9\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cv9.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: cv9.elf
+ 
+arm-none-eabi-size   cv9.elf 
+arm-none-eabi-objdump -h -S  cv9.elf  > "cv9.list"
+   text	   data	    bss	    dec	    hex	filename
+  15784	    120	   2056	  17960	   4628	cv9.elf
+Finished building: default.size.stdout
+ 
+Finished building: cv9.list
+ 
+12:34:12 **** Incremental Build of configuration Debug for project cv9 ****
+make -j4 all 
+arm-none-eabi-size   cv9.elf 
+   text	   data	    bss	    dec	    hex	filename
+  15784	    120	   2056	  17960	   4628	cv9.elf
+Finished building: default.size.stdout
+ 
+12:37:10 **** Incremental Build of configuration Debug for project cv9 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:118:50: warning: format '%d' expects a matching 'int' argument [-Wformat=]
+  118 |                                         printf("%d\nTrue:");
+      |                                                 ~^
+      |                                                  |
+      |                                                  int
+arm-none-eabi-gcc -o "cv9.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Temp\xpecon00\MPC-MKS\cv9\cv9\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cv9.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: cv9.elf
+ 
+arm-none-eabi-size   cv9.elf 
+arm-none-eabi-objdump -h -S  cv9.elf  > "cv9.list"
+   text	   data	    bss	    dec	    hex	filename
+  15788	    120	   2056	  17964	   462c	cv9.elf
+Finished building: default.size.stdout
+ 
+Finished building: cv9.list
+ 
+12:39:53 **** Incremental Build of configuration Debug for project cv9 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:117:50: warning: format '%d' expects a matching 'int' argument [-Wformat=]
+  117 |                                         printf("%d\nTrue:");
+      |                                                 ~^
+      |                                                  |
+      |                                                  int
+../Core/Src/main.c:118:43: warning: operation on 'z' may be undefined [-Wsequence-point]
+  118 |                                         z = z++;
+      |                                         ~~^~~~~
+../Core/Src/main.c:125:20: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+  125 |                 if(z = 5){
+      |                    ^
+arm-none-eabi-gcc -o "cv9.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Temp\xpecon00\MPC-MKS\cv9\cv9\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cv9.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: cv9.elf
+ 
+arm-none-eabi-size   cv9.elf 
+arm-none-eabi-objdump -h -S  cv9.elf  > "cv9.list"
+   text	   data	    bss	    dec	    hex	filename
+  15816	    120	   2056	  17992	   4648	cv9.elf
+Finished building: default.size.stdout
+ 
+Finished building: cv9.list
+ 
+12:40:12 **** Incremental Build of configuration Debug for project cv9 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:117:50: warning: format '%d' expects a matching 'int' argument [-Wformat=]
+  117 |                                         printf("%d\nTrue:");
+      |                                                 ~^
+      |                                                  |
+      |                                                  int
+../Core/Src/main.c:118:43: warning: operation on 'z' may be undefined [-Wsequence-point]
+  118 |                                         z = z++;
+      |                                         ~~^~~~~
+arm-none-eabi-gcc -o "cv9.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Temp\xpecon00\MPC-MKS\cv9\cv9\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cv9.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: cv9.elf
+ 
+arm-none-eabi-size   cv9.elf 
+arm-none-eabi-objdump -h -S  cv9.elf  > "cv9.list"
+   text	   data	    bss	    dec	    hex	filename
+  15820	    120	   2056	  17996	   464c	cv9.elf
+Finished building: default.size.stdout
+ 
+Finished building: cv9.list
+ 
+12:41:40 **** Incremental Build of configuration Debug for project cv9 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:117:50: warning: format '%d' expects a matching 'int' argument [-Wformat=]
+  117 |                                         printf("%d\nTrue:");
+      |                                                 ~^
+      |                                                  |
+      |                                                  int
+../Core/Src/main.c:118:43: warning: operation on 'z' may be undefined [-Wsequence-point]
+  118 |                                         z = z++;
+      |                                         ~~^~~~~
+../Core/Src/main.c:126:24: warning: passing argument 1 of 'printf' makes pointer from integer without a cast [-Wint-conversion]
+  126 |                 printf(z)
+      |                        ^
+      |                        |
+      |                        int8_t {aka signed char}
+In file included from ../Core/Src/main.c:24:
+C:\appz\ST\STM32CubeIDE_1.10.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\tools\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/stdio.h:210:17: note: expected 'const char * restrict' but argument is of type 'int8_t' {aka 'signed char'}
+  210 | int     printf (const char *__restrict, ...)
+      |                 ^
+../Core/Src/main.c:126:26: error: expected ';' before '}' token
+  126 |                 printf(z)
+      |                          ^
+      |                          ;
+  127 |                 }
+      |                 ~         
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:141:1: error: expected identifier or '(' before '}' token
+  141 | }
+      | ^
+make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+12:41:48 **** Incremental Build of configuration Debug for project cv9 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:117:50: warning: format '%d' expects a matching 'int' argument [-Wformat=]
+  117 |                                         printf("%d\nTrue:");
+      |                                                 ~^
+      |                                                  |
+      |                                                  int
+../Core/Src/main.c:118:43: warning: operation on 'z' may be undefined [-Wsequence-point]
+  118 |                                         z = z++;
+      |                                         ~~^~~~~
+../Core/Src/main.c:126:24: warning: passing argument 1 of 'printf' makes pointer from integer without a cast [-Wint-conversion]
+  126 |                 printf(z);
+      |                        ^
+      |                        |
+      |                        int8_t {aka signed char}
+In file included from ../Core/Src/main.c:24:
+C:\appz\ST\STM32CubeIDE_1.10.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\tools\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/stdio.h:210:17: note: expected 'const char * restrict' but argument is of type 'int8_t' {aka 'signed char'}
+  210 | int     printf (const char *__restrict, ...)
+      |                 ^
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:141:1: error: expected identifier or '(' before '}' token
+  141 | }
+      | ^
+make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+12:42:11 **** Incremental Build of configuration Debug for project cv9 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:117:50: warning: format '%d' expects a matching 'int' argument [-Wformat=]
+  117 |                                         printf("%d\nTrue:");
+      |                                                 ~^
+      |                                                  |
+      |                                                  int
+../Core/Src/main.c:118:43: warning: operation on 'z' may be undefined [-Wsequence-point]
+  118 |                                         z = z++;
+      |                                         ~~^~~~~
+../Core/Src/main.c:126:24: warning: passing argument 1 of 'printf' makes pointer from integer without a cast [-Wint-conversion]
+  126 |                 printf(z);
+      |                        ^
+      |                        |
+      |                        int8_t {aka signed char}
+In file included from ../Core/Src/main.c:24:
+C:\appz\ST\STM32CubeIDE_1.10.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\tools\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/stdio.h:210:17: note: expected 'const char * restrict' but argument is of type 'int8_t' {aka 'signed char'}
+  210 | int     printf (const char *__restrict, ...)
+      |                 ^
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:141:1: error: expected identifier or '(' before '}' token
+  141 | }
+      | ^
+make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+12:42:21 **** Incremental Build of configuration Debug for project cv9 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:117:50: warning: format '%d' expects a matching 'int' argument [-Wformat=]
+  117 |                                         printf("%d\nTrue:");
+      |                                                 ~^
+      |                                                  |
+      |                                                  int
+../Core/Src/main.c:118:43: warning: operation on 'z' may be undefined [-Wsequence-point]
+  118 |                                         z = z++;
+      |                                         ~~^~~~~
+../Core/Src/main.c:126:24: warning: passing argument 1 of 'printf' makes pointer from integer without a cast [-Wint-conversion]
+  126 |                 printf(z);
+      |                        ^
+      |                        |
+      |                        int8_t {aka signed char}
+In file included from ../Core/Src/main.c:24:
+C:\appz\ST\STM32CubeIDE_1.10.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\tools\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/stdio.h:210:17: note: expected 'const char * restrict' but argument is of type 'int8_t' {aka 'signed char'}
+  210 | int     printf (const char *__restrict, ...)
+      |                 ^
+arm-none-eabi-gcc -o "cv9.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Temp\xpecon00\MPC-MKS\cv9\cv9\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cv9.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: cv9.elf
+ 
+arm-none-eabi-size   cv9.elf 
+arm-none-eabi-objdump -h -S  cv9.elf  > "cv9.list"
+   text	   data	    bss	    dec	    hex	filename
+  15752	    120	   2056	  17928	   4608	cv9.elf
+Finished building: default.size.stdout
+ 
+Finished building: cv9.list
+ 
+12:42:54 **** Incremental Build of configuration Debug for project cv9 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:117:50: warning: format '%d' expects a matching 'int' argument [-Wformat=]
+  117 |                                         printf("%d\nTrue:");
+      |                                                 ~^
+      |                                                  |
+      |                                                  int
+arm-none-eabi-gcc -o "cv9.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Temp\xpecon00\MPC-MKS\cv9\cv9\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cv9.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: cv9.elf
+ 
+arm-none-eabi-size   cv9.elf 
+arm-none-eabi-objdump -h -S  cv9.elf  > "cv9.list"
+   text	   data	    bss	    dec	    hex	filename
+  15712	    120	   2056	  17888	   45e0	cv9.elf
+Finished building: default.size.stdout
+ 
+Finished building: cv9.list
+ 
+12:43:11 **** Incremental Build of configuration Debug for project cv9 ****
+make -j4 all 
+arm-none-eabi-size   cv9.elf 
+   text	   data	    bss	    dec	    hex	filename
+  15712	    120	   2056	  17888	   45e0	cv9.elf
+Finished building: default.size.stdout
+ 
+12:43:52 **** Incremental Build of configuration Debug for project cv9 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:118:50: warning: format '%d' expects a matching 'int' argument [-Wformat=]
+  118 |                                         printf("%d\nTrue:");
+      |                                                 ~^
+      |                                                  |
+      |                                                  int
+arm-none-eabi-gcc -o "cv9.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Temp\xpecon00\MPC-MKS\cv9\cv9\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cv9.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: cv9.elf
+ 
+arm-none-eabi-size   cv9.elf 
+arm-none-eabi-objdump -h -S  cv9.elf  > "cv9.list"
+   text	   data	    bss	    dec	    hex	filename
+  15784	    120	   2056	  17960	   4628	cv9.elf
+Finished building: default.size.stdout
+ 
+Finished building: cv9.list
+ 
+12:45:10 **** Incremental Build of configuration Debug for project cv9 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:118:50: warning: format '%d' expects a matching 'int' argument [-Wformat=]
+  118 |                                         printf("%d\nTrue:");
+      |                                                 ~^
+      |                                                  |
+      |                                                  int
+../Core/Src/main.c:127:34: warning: format '%d' expects a matching 'int' argument [-Wformat=]
+  127 |                         printf("%d\nKod:");
+      |                                 ~^
+      |                                  |
+      |                                  int
+arm-none-eabi-gcc -o "cv9.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Temp\xpecon00\MPC-MKS\cv9\cv9\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cv9.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: cv9.elf
+ 
+arm-none-eabi-size   cv9.elf 
+arm-none-eabi-objdump -h -S  cv9.elf  > "cv9.list"
+   text	   data	    bss	    dec	    hex	filename
+  15832	    120	   2056	  18008	   4658	cv9.elf
+Finished building: default.size.stdout
+ 
+Finished building: cv9.list
+ 
+12:46:02 **** Incremental Build of configuration Debug for project cv9 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:118:50: warning: format '%d' expects a matching 'int' argument [-Wformat=]
+  118 |                                         printf("%d\nTrue:");
+      |                                                 ~^
+      |                                                  |
+      |                                                  int
+arm-none-eabi-gcc -o "cv9.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Temp\xpecon00\MPC-MKS\cv9\cv9\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cv9.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: cv9.elf
+ 
+arm-none-eabi-size   cv9.elf 
+arm-none-eabi-objdump -h -S  cv9.elf  > "cv9.list"
+   text	   data	    bss	    dec	    hex	filename
+  15784	    120	   2056	  17960	   4628	cv9.elf
+Finished building: default.size.stdout
+ 
+Finished building: cv9.list
+ 
+12:47:09 **** Incremental Build of configuration Debug for project cv9 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:118:50: warning: format '%d' expects a matching 'int' argument [-Wformat=]
+  118 |                                         printf("%d\nTrue:");
+      |                                                 ~^
+      |                                                  |
+      |                                                  int
+arm-none-eabi-gcc -o "cv9.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Temp\xpecon00\MPC-MKS\cv9\cv9\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cv9.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: cv9.elf
+ 
+arm-none-eabi-size   cv9.elf 
+arm-none-eabi-objdump -h -S  cv9.elf  > "cv9.list"
+   text	   data	    bss	    dec	    hex	filename
+  15788	    120	   2056	  17964	   462c	cv9.elf
+Finished building: default.size.stdout
+ 
+Finished building: cv9.list
+ 
+12:47:59 **** Incremental Build of configuration Debug for project cv9 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:117:50: warning: format '%d' expects a matching 'int' argument [-Wformat=]
+  117 |                                         printf("%d\nTrue:");
+      |                                                 ~^
+      |                                                  |
+      |                                                  int
+arm-none-eabi-gcc -o "cv9.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Temp\xpecon00\MPC-MKS\cv9\cv9\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cv9.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: cv9.elf
+ 
+arm-none-eabi-size   cv9.elf 
+arm-none-eabi-objdump -h -S  cv9.elf  > "cv9.list"
+   text	   data	    bss	    dec	    hex	filename
+  15784	    120	   2056	  17960	   4628	cv9.elf
+Finished building: default.size.stdout
+ 
+Finished building: cv9.list
+ 
+12:55:38 **** Incremental Build of configuration Debug for project cv9 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:115:42: warning: format '%d' expects a matching 'int' argument [-Wformat=]
+  115 |                                 printf("%d\nTrue:");
+      |                                         ~^
+      |                                          |
+      |                                          int
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:143:1: error: expected identifier or '(' before '}' token
+  143 | }
+      | ^
+make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+12:56:11 **** Incremental Build of configuration Debug for project cv9 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:115:42: warning: format '%d' expects a matching 'int' argument [-Wformat=]
+  115 |                                 printf("%d\nTrue:");
+      |                                         ~^
+      |                                          |
+      |                                          int
+arm-none-eabi-gcc -o "cv9.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Temp\xpecon00\MPC-MKS\cv9\cv9\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cv9.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: cv9.elf
+ 
+arm-none-eabi-size   cv9.elf 
+arm-none-eabi-objdump -h -S  cv9.elf  > "cv9.list"
+   text	   data	    bss	    dec	    hex	filename
+  15800	    120	   2056	  17976	   4638	cv9.elf
+Finished building: default.size.stdout
+ 
+Finished building: cv9.list
+ 
+12:58:16 **** Incremental Build of configuration Debug for project cv9 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:115:42: warning: format '%d' expects a matching 'int' argument [-Wformat=]
+  115 |                                 printf("%d\nTrue:");
+      |                                         ~^
+      |                                          |
+      |                                          int
+arm-none-eabi-gcc -o "cv9.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Temp\xpecon00\MPC-MKS\cv9\cv9\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cv9.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: cv9.elf
+ 
+arm-none-eabi-size   cv9.elf 
+arm-none-eabi-objdump -h -S  cv9.elf  > "cv9.list"
+   text	   data	    bss	    dec	    hex	filename
+  15800	    120	   2056	  17976	   4638	cv9.elf
+Finished building: default.size.stdout
+ 
+Finished building: cv9.list
+ 
+12:59:51 **** Incremental Build of configuration Debug for project cv9 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:115:42: warning: format '%d' expects a matching 'int' argument [-Wformat=]
+  115 |                                 printf("%d\nTrue:");
+      |                                         ~^
+      |                                          |
+      |                                          int
+arm-none-eabi-gcc -o "cv9.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Temp\xpecon00\MPC-MKS\cv9\cv9\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cv9.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: cv9.elf
+ 
+arm-none-eabi-size   cv9.elf 
+arm-none-eabi-objdump -h -S  cv9.elf  > "cv9.list"
+   text	   data	    bss	    dec	    hex	filename
+  15804	    112	   2056	  17972	   4634	cv9.elf
+Finished building: default.size.stdout
+ 
+Finished building: cv9.list
+ 
+13:00:02 **** Incremental Build of configuration Debug for project cv9 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "cv9.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Temp\xpecon00\MPC-MKS\cv9\cv9\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cv9.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: cv9.elf
+ 
+arm-none-eabi-size   cv9.elf 
+arm-none-eabi-objdump -h -S  cv9.elf  > "cv9.list"
+   text	   data	    bss	    dec	    hex	filename
+  15812	    112	   2056	  17980	   463c	cv9.elf
+Finished building: default.size.stdout
+ 
+Finished building: cv9.list
+ 
+13:00:05 **** Incremental Build of configuration Debug for project cv9 ****
+make -j4 all 
+arm-none-eabi-size   cv9.elf 
+   text	   data	    bss	    dec	    hex	filename
+  15812	    112	   2056	  17980	   463c	cv9.elf
+Finished building: default.size.stdout
+ 
+13:01:20 **** Incremental Build of configuration Debug for project cv9 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "cv9.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Temp\xpecon00\MPC-MKS\cv9\cv9\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cv9.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: cv9.elf
+ 
+arm-none-eabi-size   cv9.elf 
+arm-none-eabi-objdump -h -S  cv9.elf  > "cv9.list"
+   text	   data	    bss	    dec	    hex	filename
+  15828	    112	   2056	  17996	   464c	cv9.elf
+Finished building: default.size.stdout
+ 
+Finished building: cv9.list
+ 
+13:01:23 **** Incremental Build of configuration Debug for project cv9 ****
+make -j4 all 
+arm-none-eabi-size   cv9.elf 
+   text	   data	    bss	    dec	    hex	filename
+  15828	    112	   2056	  17996	   464c	cv9.elf
+Finished building: default.size.stdout
+ 
+13:01:40 **** Incremental Build of configuration Debug for project cv9 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "cv9.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Temp\xpecon00\MPC-MKS\cv9\cv9\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cv9.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: cv9.elf
+ 
+arm-none-eabi-size   cv9.elf 
+arm-none-eabi-objdump -h -S  cv9.elf  > "cv9.list"
+   text	   data	    bss	    dec	    hex	filename
+  15828	    112	   2056	  17996	   464c	cv9.elf
+Finished building: default.size.stdout
+ 
+Finished building: cv9.list
+ 
+13:01:47 **** Incremental Build of configuration Debug for project cv9 ****
+make -j4 all 
+arm-none-eabi-size   cv9.elf 
+   text	   data	    bss	    dec	    hex	filename
+  15828	    112	   2056	  17996	   464c	cv9.elf
+Finished building: default.size.stdout
+ 
