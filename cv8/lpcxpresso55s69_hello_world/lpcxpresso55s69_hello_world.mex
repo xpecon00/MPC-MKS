@@ -88,6 +88,7 @@
                      </pin_features>
                   </pin>
                   <pin peripheral="CTIMER2" signal="MATCH, 2" pin_num="9" pin_signal="PIO1_7/FC0_RTS_SCL_SSEL1/SD0_D1/CTIMER2_MAT2/SCT_GPI4"/>
+                  <pin peripheral="CTIMER2" signal="MATCH, 1" pin_num="1" pin_signal="PIO1_4/FC0_SCK/SD0_D0/CTIMER2_MAT1/SCT0_OUT0/FREQME_GPIO_CLK_A"/>
                </pins>
             </function>
          </functions_list>
